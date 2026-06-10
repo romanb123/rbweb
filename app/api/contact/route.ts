@@ -1,6 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
+export async function GET() {
+  return NextResponse.json({
+    hasKey: !!process.env.RESEND_API_KEY,
+    keyLength: process.env.RESEND_API_KEY?.length ?? 0,
+  })
+}
+
 export async function POST(req: NextRequest) {
   try {
     const { name, email, message } = await req.json()

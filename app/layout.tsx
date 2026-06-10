@@ -31,7 +31,7 @@ const sarabun = Sarabun({
 })
 
 export const metadata: Metadata = {
-  title: 'RBweb — מפתח Full-Stack | Web & App Developer',
+  title: 'RBapp — מפתח Full-Stack | Web & App Developer',
   description:
     'Roman Besiakov — מפתח Full-Stack. בניית אתרים ואפליקציות מובייל. Full-Stack Developer building high-performance websites and apps.',
   keywords: ['web developer', 'app developer', 'full-stack', 'React', 'Next.js', 'WordPress', 'Israel', 'מפתח אתרים'],

@@ -358,7 +358,7 @@ function Nav({ lang, onChangeLang }: { lang: Lang; onChangeLang: (l: Lang) => vo
       <div className="nav-inner">
         <a href="#home" className="nav-brand">
           <Logo />
-          <span className="nav-brand-text">RBweb</span>
+          <span className="nav-brand-text">RBapp</span>
         </a>
         <div className="nav-links">
           <a href="#services">{t.services}</a>
@@ -700,7 +700,7 @@ function Footer({ lang }: { lang: Lang }) {
         <div className="footer-inner">
           <div className="footer-brand">
             <Logo size={32} />
-            <span>RBweb</span>
+            <span>RBapp</span>
           </div>
           <span className="footer-copy">{T[lang].footer.copy}</span>
         </div>

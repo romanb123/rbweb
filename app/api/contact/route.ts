@@ -56,8 +56,9 @@ export async function POST(req: NextRequest) {
     })
 
     return NextResponse.json({ ok: true })
-  } catch (err) {
-    console.error('Mail error:', err)
-    return NextResponse.json({ error: 'Failed to send' }, { status: 500 })
+  } catch (err: unknown) {
+    const msg = err instanceof Error ? err.message : String(err)
+    console.error('Mail error:', msg)
+    return NextResponse.json({ error: 'Failed to send', detail: msg }, { status: 500 })
   }
 }

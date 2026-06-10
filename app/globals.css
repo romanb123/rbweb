@@ -806,9 +806,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .lang-select {
   appearance: none;
   -webkit-appearance: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   width: 52px;
   height: 36px;
   border-radius: 8px;
@@ -821,6 +819,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   cursor: pointer;
   transition: border-color 0.2s ease, color 0.2s ease;
   flex-shrink: 0;
+  text-align: center;
+  text-align-last: center;
+  padding: 0;
 }
 .lang-select:hover,
 .lang-select:focus {

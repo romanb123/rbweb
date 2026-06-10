@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import nodemailer from 'nodemailer'
+import { Resend } from 'resend'
 
 export async function POST(req: NextRequest) {
   try {
@@ -9,16 +9,10 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Missing fields' }, { status: 400 })
     }
 
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_APP_PASSWORD,
-      },
-    })
+    const resend = new Resend(process.env.RESEND_API_KEY)
 
-    await transporter.sendMail({
-      from: `"RBweb Contact" <${process.env.GMAIL_USER}>`,
+    await resend.emails.send({
+      from: 'RBweb <onboarding@resend.dev>',
       to: 'romaflz73@gmail.com',
       subject: `RBweb — הודעה חדשה מ-${name}`,
       replyTo: email,
@@ -49,7 +43,7 @@ export async function POST(req: NextRequest) {
             <div style="background:#fff;border:1px solid #e5e5e5;border-radius:10px;padding:18px 20px;font-size:15px;color:#333;line-height:1.7;white-space:pre-wrap;">${message}</div>
           </div>
           <div style="padding:16px 28px;background:#f3f3f3;">
-            <p style="margin:0;font-size:12px;color:#aaa;">נשלח מ-rbweb.com</p>
+            <p style="margin:0;font-size:12px;color:#aaa;">נשלח מ-rbweb.amplifyapp.com</p>
           </div>
         </div>
       `,

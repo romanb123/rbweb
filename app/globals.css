@@ -816,6 +816,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 /* ─── RTL overrides ──────────────────────────────────────────────── */
+[dir="rtl"] .hero-line { font-size: clamp(36px, 9.5vw, 90px); }
 [dir="rtl"] .section-label { letter-spacing: 0.08em; }
 [dir="rtl"] .hero-tag { flex-direction: row-reverse; }
 [dir="rtl"] .hero-actions { flex-direction: row-reverse; }

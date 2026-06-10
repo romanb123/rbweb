@@ -828,6 +828,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 [dir="rtl"] .highlight { flex-direction: row-reverse; text-align: right; }
 [dir="rtl"] .highlight div { align-items: flex-end; }
 [dir="rtl"] .service-tags { flex-direction: row-reverse; }
+[dir="rtl"] input[type="tel"] { direction: rtl; }
 
 /* ─── Mobile ──────────────────────────────────────────────────────── */
 @media (max-width: 900px) {

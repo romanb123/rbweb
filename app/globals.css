@@ -25,7 +25,7 @@ html[dir="rtl"] {
 
 /* ─── Reset ──────────────────────────────────────────────────────── */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; font-size: 16px; }
+html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; }
 body {
   background: var(--bg);
   color: var(--text);
@@ -55,7 +55,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .section-title {
   font-family: var(--font-display);
-  font-size: clamp(36px, 4vw, 56px);
+  font-size: clamp(28px, 4vw, 56px);
   font-weight: 800;
   line-height: 1.05;
   letter-spacing: -0.03em;
@@ -274,7 +274,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .hero-line {
   display: block;
-  font-size: clamp(22px, 8.5vw, 90px);
+  font-size: clamp(20px, 6.5vw, 90px);
 }
 
 .hero-sub {
@@ -684,7 +684,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .contact-headline {
   font-family: var(--font-display);
-  font-size: clamp(56px, 9vw, 120px);
+  font-size: clamp(32px, 9vw, 120px);
   font-weight: 800;
   letter-spacing: -0.04em;
   line-height: 0.95;
@@ -842,7 +842,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .container { padding: 0 20px; }
   .nav-inner { padding: 0 20px; }
   .nav-links a:not(.nav-cta) { display: none; }
-  .hero-inner { padding: 0 20px; }
+  .nav-cta { padding: 8px 14px !important; font-size: 13px !important; }
+  .hero-inner { padding: 0 20px; width: 100%; overflow: hidden; }
+  .hero-tag { overflow: hidden; white-space: nowrap; letter-spacing: 0.1em; }
   .hero-stats { flex-direction: column; gap: 24px; align-items: flex-start; }
   .stat-divider { width: 40px; height: 1px; margin: 0; }
   .form-row { grid-template-columns: 1fr; }

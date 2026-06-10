@@ -12,7 +12,7 @@ export async function GET() {
 
 export async function POST(req: NextRequest) {
   try {
-    const { name, email, message } = await req.json()
+    const { name, email, phone, message } = await req.json()
 
     if (!name || !email || !message) {
       return NextResponse.json({ error: 'Missing fields' }, { status: 400 })
@@ -45,6 +45,12 @@ export async function POST(req: NextRequest) {
                   <a href="mailto:${email}" style="color:#060606;">${email}</a>
                 </td>
               </tr>
+              ${phone ? `<tr>
+                <td style="padding:8px 0;font-size:13px;color:#999;vertical-align:top;">טלפון</td>
+                <td style="padding:8px 0;font-size:15px;color:#060606;">
+                  <a href="tel:${phone}" style="color:#060606;">${phone}</a>
+                </td>
+              </tr>` : ''}
               <tr>
                 <td style="padding:8px 0;font-size:13px;color:#999;vertical-align:top;">הודעה</td>
                 <td style="padding:8px 0;"></td>

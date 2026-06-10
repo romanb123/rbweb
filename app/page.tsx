@@ -76,6 +76,7 @@ const T = {
       sub: "Have a project in mind? Let's talk.",
       name_ph: 'Your name',
       email_ph: 'Your email',
+      phone_ph: 'Your phone (optional)',
       message_ph: 'Tell me about your project...',
       submit: 'Send message →',
       sending: 'Sending...',
@@ -156,6 +157,7 @@ const T = {
       sub: 'יש לך פרויקט? בואו נדבר.',
       name_ph: 'השם שלך',
       email_ph: 'האימייל שלך',
+      phone_ph: 'הטלפון שלך (אופציונלי)',
       message_ph: 'ספר לי על הפרויקט...',
       submit: 'שלח הודעה ←',
       sending: 'שולח...',
@@ -413,7 +415,7 @@ type FormStatus = 'idle' | 'sending' | 'sent' | 'error'
 function Contact({ lang }: { lang: Lang }) {
   const t = T[lang].contact
   const [status, setStatus] = useState<FormStatus>('idle')
-  const [form, setForm] = useState({ name: '', email: '', message: '' })
+  const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' })
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
@@ -430,7 +432,7 @@ function Contact({ lang }: { lang: Lang }) {
       })
       if (!res.ok) throw new Error()
       setStatus('sent')
-      setForm({ name: '', email: '', message: '' })
+      setForm({ name: '', email: '', phone: '', message: '' })
     } catch {
       setStatus('error')
     }
@@ -480,6 +482,17 @@ function Contact({ lang }: { lang: Lang }) {
                   autoComplete="email"
                 />
               </div>
+            </div>
+            <div className="form-group">
+              <input
+                type="tel"
+                name="phone"
+                className="form-input"
+                placeholder={t.phone_ph}
+                value={form.phone}
+                onChange={handleChange}
+                autoComplete="tel"
+              />
             </div>
             <div className="form-group">
               <textarea

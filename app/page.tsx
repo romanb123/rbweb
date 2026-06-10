@@ -75,8 +75,8 @@ const T = {
       line2: 'something.',
       sub: "Have a project in mind? Let's talk.",
       name_ph: 'Your name',
-      email_ph: 'Your email',
-      phone_ph: 'Your phone (optional)',
+      phone_ph: 'Your phone',
+      email_ph: 'Your email (optional)',
       message_ph: 'Tell me about your project...',
       submit: 'Send message →',
       sending: 'Sending...',
@@ -156,8 +156,8 @@ const T = {
       line2: 'משהו.',
       sub: 'יש לך פרויקט? בואו נדבר.',
       name_ph: 'השם שלך',
-      email_ph: 'האימייל שלך',
-      phone_ph: 'הטלפון שלך (אופציונלי)',
+      phone_ph: 'הטלפון שלך',
+      email_ph: 'האימייל שלך (אופציונלי)',
       message_ph: 'ספר לי על הפרויקט...',
       submit: 'שלח הודעה ←',
       sending: 'שולח...',
@@ -472,26 +472,27 @@ function Contact({ lang }: { lang: Lang }) {
               </div>
               <div className="form-group">
                 <input
-                  type="email"
-                  name="email"
+                  type="tel"
+                  name="phone"
                   className="form-input"
-                  placeholder={t.email_ph}
-                  value={form.email}
+                  placeholder={t.phone_ph}
+                  value={form.phone}
                   onChange={handleChange}
                   required
-                  autoComplete="email"
+                  autoComplete="tel"
+                  dir="auto"
                 />
               </div>
             </div>
             <div className="form-group">
               <input
-                type="tel"
-                name="phone"
+                type="email"
+                name="email"
                 className="form-input"
-                placeholder={t.phone_ph}
-                value={form.phone}
+                placeholder={t.email_ph}
+                value={form.email}
                 onChange={handleChange}
-                autoComplete="tel"
+                autoComplete="email"
               />
             </div>
             <div className="form-group">

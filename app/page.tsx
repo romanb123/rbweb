@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 
 // ─── Types & Translations ─────────────────────────────────────────────────────
-type Lang = 'he' | 'en'
+type Lang = 'he' | 'en' | 'ru' | 'th'
 
 const T = {
   en: {
@@ -168,7 +168,170 @@ const T = {
       copy: `© ${new Date().getFullYear()} Roman Besiakov. כל הזכויות שמורות.`,
     },
   },
+
+  ru: {
+    nav: {
+      services: 'Услуги',
+      projects: 'Проекты',
+      about: 'Обо мне',
+      contact: 'Связаться ↗',
+    },
+    hero: {
+      tag: 'Full-Stack разработчик · Открыт для проектов',
+      line1: 'ВЕБ И АПП',
+      line2: 'РАЗРАБОТКА.',
+      sub: 'Создаю цифровые продукты, которые работают,\nконвертируют и выдерживают испытание временем.',
+      cta1: 'Начать проект →',
+      cta2: 'Мои работы ↓',
+      stat_num: '5+',
+      stat_label: 'Лет опыта',
+    },
+    services: {
+      label: 'Что я делаю',
+      title: 'Услуги',
+      items: [
+        {
+          num: '01',
+          title: 'Веб-разработка',
+          desc: 'Сайты под ключ из макетов Figma или с нуля. WordPress, React, Next.js — всё, что нужно вашему проекту.',
+          tags: ['React', 'Next.js', 'WordPress', 'PHP', 'SCSS'],
+        },
+        {
+          num: '02',
+          title: 'Разработка приложений',
+          desc: 'Полный цикл разработки мобильных и веб-приложений. От REST API до полированного UI — создаю для масштаба и продакшена.',
+          tags: ['React Native', 'Node.js', 'MongoDB', 'REST API'],
+        },
+        {
+          num: '03',
+          title: 'SEO и производительность',
+          desc: 'Реальные результаты: с 32 до 95 в Google Lighthouse. Экспертиза в Core Web Vitals, Google Analytics 4 и Tag Manager.',
+          tags: ['Lighthouse', 'GA4', 'GTM', 'Core Web Vitals'],
+        },
+      ],
+    },
+    projects: {
+      label: 'Избранные работы',
+      title: 'Проекты',
+      app_type: 'Мобильное приложение · Android · Google Play',
+      app_title: 'One Second Challenge',
+      app_desc: 'Мобильная игра на реакцию — нужно нажать в точный момент. Спроектировано, разработано и опубликовано в Google Play Store от идеи до живого продукта.',
+      app_link: 'Посмотреть в Google Play ↗',
+    },
+    about: {
+      label: 'Обо мне',
+      title: 'Full-Stack\nРазработчик',
+      text1: 'Я Роман Бесяков — Full-Stack разработчик с 5+ годами профессионального опыта создания сайтов и приложений production-уровня. Воплощаю идеи от концепции до живого продукта.',
+      text2: 'Специализируюсь на превращении дизайнов в быстрые и функциональные цифровые продукты. От новостных порталов на WordPress до мобильных приложений в Google Play.',
+      h1_title: 'John Bryce',
+      h1_sub: 'Веб-разработка Full-Stack · Оценка: 100/100',
+      h2_title: '5+ Лет',
+      h2_sub: 'Профессионального опыта разработки',
+      h3_title: 'Языки',
+      h3_sub: 'Иврит (родной) · Русский (родной) · Английский (продвинутый)',
+      linkedin: 'Профиль LinkedIn ↗',
+    },
+    contact: {
+      label: 'Связаться',
+      line1: 'Давайте создадим',
+      line2: 'что-то.',
+      sub: 'Есть проект? Давайте поговорим.',
+      name_ph: 'Ваше имя',
+      phone_ph: 'Ваш телефон',
+      email_ph: 'Ваш email (необязательно)',
+      message_ph: 'Расскажите о вашем проекте...',
+      submit: 'Отправить →',
+      sending: 'Отправка...',
+      success: 'Сообщение отправлено! Скоро свяжусь с вами.',
+      error: 'Что-то пошло не так. Попробуйте ещё раз.',
+    },
+    footer: {
+      copy: `© ${new Date().getFullYear()} Roman Besiakov. Все права защищены.`,
+    },
+  },
+
+  th: {
+    nav: {
+      services: 'บริการ',
+      projects: 'ผลงาน',
+      about: 'เกี่ยวกับ',
+      contact: 'ติดต่อ ↗',
+    },
+    hero: {
+      tag: 'นักพัฒนา Full-Stack · พร้อมรับโปรเจกต์ใหม่',
+      line1: 'พัฒนาเว็บ',
+      line2: 'และแอป.',
+      sub: 'สร้างผลิตภัณฑ์ดิจิทัลที่ได้ผลลัพธ์จริง\nและยืนหยัดในการทดสอบของเวลา',
+      cta1: 'เริ่มโปรเจกต์ →',
+      cta2: 'ดูผลงาน ↓',
+      stat_num: '5+',
+      stat_label: 'ปีประสบการณ์',
+    },
+    services: {
+      label: 'สิ่งที่ฉันทำ',
+      title: 'บริการ',
+      items: [
+        {
+          num: '01',
+          title: 'พัฒนาเว็บไซต์',
+          desc: 'เว็บไซต์แบบกำหนดเองจากดีไซน์ Figma หรือเริ่มต้นใหม่ WordPress, React, Next.js — ทุกอย่างที่โปรเจกต์ของคุณต้องการ',
+          tags: ['React', 'Next.js', 'WordPress', 'PHP', 'SCSS'],
+        },
+        {
+          num: '02',
+          title: 'พัฒนาแอปพลิเคชัน',
+          desc: 'แอปมือถือและเว็บแบบ Full-Stack ตั้งแต่ REST API ถึง UI ที่สวยงาม สร้างเพื่อรองรับการเติบโตและพร้อม production',
+          tags: ['React Native', 'Node.js', 'MongoDB', 'REST API'],
+        },
+        {
+          num: '03',
+          title: 'SEO และประสิทธิภาพ',
+          desc: 'ผลลัพธ์จริง: จาก 32 เป็น 95 ใน Google Lighthouse ความเชี่ยวชาญใน Core Web Vitals, Google Analytics 4 และ Tag Manager',
+          tags: ['Lighthouse', 'GA4', 'GTM', 'Core Web Vitals'],
+        },
+      ],
+    },
+    projects: {
+      label: 'ผลงานเด่น',
+      title: 'ผลงาน',
+      app_type: 'แอปมือถือ · Android · Google Play',
+      app_title: 'One Second Challenge',
+      app_desc: 'เกมมือถือทดสอบปฏิกิริยาตอบสนอง ผู้เล่นต้องแตะหน้าจอในจังหวะที่แม่นยำ ออกแบบ พัฒนา และเผยแพร่บน Google Play Store จากแนวคิดสู่ผลิตภัณฑ์จริง',
+      app_link: 'ดูใน Google Play ↗',
+    },
+    about: {
+      label: 'เกี่ยวกับฉัน',
+      title: 'นักพัฒนา\nFull-Stack',
+      text1: 'ผมคือ Roman Besiakov — นักพัฒนา Full-Stack ที่มีประสบการณ์มืออาชีพกว่า 5+ ปีในการสร้างเว็บไซต์และแอปพลิเคชันระดับ production ผมนำไอเดียจากแนวคิดสู่ผลิตภัณฑ์จริง',
+      text2: 'เชี่ยวชาญในการแปลงดีไซน์เป็นผลิตภัณฑ์ดิจิทัลที่รวดเร็วและใช้งานได้จริง ตั้งแต่พอร์ทัลข่าว WordPress จนถึงแอปใน Google Play',
+      h1_title: 'John Bryce',
+      h1_sub: 'การพัฒนาเว็บ Full-Stack · คะแนน: 100/100',
+      h2_title: '5+ ปี',
+      h2_sub: 'ประสบการณ์การพัฒนาซอฟต์แวร์มืออาชีพ',
+      h3_title: 'ภาษา',
+      h3_sub: 'ฮิบรู (เจ้าของภาษา) · รัสเซีย (เจ้าของภาษา) · อังกฤษ (ขั้นสูง)',
+      linkedin: 'โปรไฟล์ LinkedIn ↗',
+    },
+    contact: {
+      label: 'ติดต่อฉัน',
+      line1: 'มาสร้าง',
+      line2: 'บางอย่าง.',
+      sub: 'มีโปรเจกต์ในใจ? มาคุยกันเลย',
+      name_ph: 'ชื่อของคุณ',
+      phone_ph: 'เบอร์โทรศัพท์',
+      email_ph: 'อีเมล (ไม่บังคับ)',
+      message_ph: 'เล่าให้ฟังเกี่ยวกับโปรเจกต์ของคุณ...',
+      submit: 'ส่งข้อความ →',
+      sending: 'กำลังส่ง...',
+      success: 'ส่งข้อความสำเร็จ! จะติดต่อกลับเร็วๆ นี้',
+      error: 'เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง',
+    },
+    footer: {
+      copy: `© ${new Date().getFullYear()} Roman Besiakov. สงวนลิขสิทธิ์`,
+    },
+  },
 } as const
+
 
 // ─── Logo ─────────────────────────────────────────────────────────────────────
 function Logo({ size = 38 }: { size?: number }) {
@@ -180,7 +343,7 @@ function Logo({ size = 38 }: { size?: number }) {
 }
 
 // ─── Nav ──────────────────────────────────────────────────────────────────────
-function Nav({ lang, onToggle }: { lang: Lang; onToggle: () => void }) {
+function Nav({ lang, onChangeLang }: { lang: Lang; onChangeLang: (l: Lang) => void }) {
   const [scrolled, setScrolled] = useState(false)
   const t = T[lang].nav
 
@@ -201,9 +364,17 @@ function Nav({ lang, onToggle }: { lang: Lang; onToggle: () => void }) {
           <a href="#services">{t.services}</a>
           <a href="#projects">{t.projects}</a>
           <a href="#about">{t.about}</a>
-          <button className="lang-toggle" onClick={onToggle} aria-label="Toggle language">
-            {lang === 'he' ? 'EN' : 'עב'}
-          </button>
+          <select
+            className="lang-select"
+            value={lang}
+            onChange={(e) => onChangeLang(e.target.value as Lang)}
+            aria-label="Select language"
+          >
+            <option value="he">עב</option>
+            <option value="en">EN</option>
+            <option value="ru">RU</option>
+            <option value="th">TH</option>
+          </select>
           <a href="#contact" className="nav-cta">{t.contact}</a>
         </div>
       </div>
@@ -560,7 +731,7 @@ export default function Home() {
 
   return (
     <>
-      <Nav lang={lang} onToggle={() => setLang((l) => (l === 'he' ? 'en' : 'he'))} />
+      <Nav lang={lang} onChangeLang={setLang} />
       <main>
         <Hero lang={lang} />
         <Services lang={lang} />

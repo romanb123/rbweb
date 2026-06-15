@@ -370,7 +370,7 @@ function Nav({ lang, onChangeLang }: { lang: Lang; onChangeLang: (l: Lang) => vo
             onChange={(e) => onChangeLang(e.target.value as Lang)}
             aria-label="Select language"
           >
-            <option value="he">HEB</option>
+            <option value="he">HE</option>
             <option value="en">EN</option>
             <option value="ru">RU</option>
             <option value="th">TH</option>

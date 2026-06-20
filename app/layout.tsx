@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Syne, IBM_Plex_Mono, Rubik, Sarabun } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 
 const syne = Syne({
@@ -44,6 +45,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       dir="rtl"
       className={`${syne.variable} ${ibmPlexMono.variable} ${rubik.variable} ${sarabun.variable}`}
     >
+      <head>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-4RD1EM3RS7" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-4RD1EM3RS7');
+        `}</Script>
+      </head>
       <body>{children}</body>
     </html>
   )

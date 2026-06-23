@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Syne, IBM_Plex_Mono, Rubik, Sarabun } from 'next/font/google'
 import Script from 'next/script'
+import Accessibility from './_components/Accessibility'
 import './globals.css'
 
 const syne = Syne({
@@ -54,7 +55,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           gtag('config', 'G-4RD1EM3RS7');
         `}</Script>
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Accessibility />
+      </body>
     </html>
   )
 }

@@ -9,19 +9,19 @@ const LANGS: Lang[] = ['he', 'en', 'ru', 'th']
 const META: Record<Lang, { title: string; description: string }> = {
   he: {
     title: 'RBapp — מפתח Full-Stack | פיתוח אתרים ואפליקציות',
-    description: 'מפתח Full-Stack עם 5+ שנות ניסיון. בניית אתרים מהירים, אפליקציות מובייל ופתרונות SEO. WordPress, React, Next.js, React Native.',
+    description: 'בונה אתרים מהירים ואפליקציות מובייל — מהרעיון ועד המוצר הסופי. React, Next.js, WordPress, React Native.',
   },
   en: {
     title: 'RBapp — Full-Stack Developer | Web & App Development',
-    description: 'Full-Stack Developer with 5+ years of experience. Building high-performance websites, mobile apps & SEO-optimized solutions. React, Next.js, WordPress.',
+    description: 'Building fast websites and mobile apps — from idea to live product. React, Next.js, WordPress, React Native.',
   },
   ru: {
     title: 'RBapp — Full-Stack Разработчик | Веб и Мобильные Приложения',
-    description: 'Full-Stack разработчик с 5+ годами опыта. Создание быстрых сайтов, мобильных приложений и SEO-решений. React, Next.js, WordPress, React Native.',
+    description: 'Создаю быстрые сайты и мобильные приложения — от идеи до готового продукта. React, Next.js, WordPress, React Native.',
   },
   th: {
     title: 'RBapp — นักพัฒนา Full-Stack | พัฒนาเว็บและแอป',
-    description: 'นักพัฒนา Full-Stack ที่มีประสบการณ์ 5+ ปี สร้างเว็บไซต์ประสิทธิภาพสูง แอปมือถือ และโซลูชัน SEO React, Next.js, WordPress',
+    description: 'สร้างเว็บไซต์และแอปมือถือ — จากไอเดียสู่ผลิตภัณฑ์จริง React, Next.js, WordPress, React Native.',
   },
 }
 

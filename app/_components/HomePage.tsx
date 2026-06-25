@@ -620,6 +620,10 @@ function Contact({ lang }: { lang: Lang }) {
         </h2>
         <p className="contact-sub reveal">{t.sub}</p>
 
+        <a href="mailto:info@rb-app.com" className="contact-email reveal">
+          info@rb-app.com
+        </a>
+
         {status === 'sent' ? (
           <div className="form-success reveal">
             <span className="form-success-icon">✓</span>

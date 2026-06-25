@@ -95,6 +95,17 @@ html.a11y-big-cursor * {
   text-decoration: underline; text-underline-offset: 2px;
 }
 .a11y-reset:hover { color: #c8ff00; }
+.contact-email {
+  display: inline-block;
+  font-size: 1rem;
+  color: #c8ff00;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(200,255,0,0.3);
+  padding-bottom: 2px;
+  margin-bottom: 2rem;
+  transition: border-color 0.15s;
+}
+.contact-email:hover { border-color: #c8ff00; }
 .a11y-shortcut {
   font-size: 0.62rem; color: rgba(90,90,90,0.6);
   font-family: var(--font-mono), monospace;

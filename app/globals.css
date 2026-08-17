@@ -518,7 +518,28 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   padding: 120px 0;
   border-top: 1px solid var(--border);
 }
-.projects-grid { margin-top: 0; }
+.projects-grid {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.project-phone--maze {
+  background: linear-gradient(135deg, #0a0f0a 0%, #131813 100%);
+}
+.project-phone--maze::before {
+  background: radial-gradient(ellipse at 50% 60%, rgba(200,255,0,0.08) 0%, transparent 70%);
+}
+
+.phone-app-icon--maze {
+  background: linear-gradient(135deg, #1a2a0a 0%, #2a4010 100%);
+  border: 1px solid rgba(200,255,0,0.2);
+  font-size: 36px;
+}
+.phone-app-icon--maze span {
+  font-size: 36px;
+}
 
 .project-card {
   background: var(--bg-card);

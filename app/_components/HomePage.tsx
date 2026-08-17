@@ -55,6 +55,10 @@ const T = {
       app_desc:
         'A reflex-based mobile game where players must tap at precisely the right moment. Designed, built, and published to the Google Play Store — from concept to live product.',
       app_link: 'View on Google Play ↗',
+      app2_type: 'Mobile Game · Android · Google Play',
+      app2_title: 'Mouse Maze',
+      app2_desc: 'A maze puzzle game where you guide a mouse to cheese through increasingly challenging levels. Solve math puzzles to unlock path blocks — from concept to live product.',
+      app2_link: 'View on Google Play ↗',
     },
     about: {
       label: 'About',
@@ -136,6 +140,10 @@ const T = {
       app_title: 'One Second Challenge',
       app_desc: 'משחק מובייל מבוסס רפלקסים שבו השחקן חייב ללחוץ ברגע המדויק. עוצב, פותח ופורסם ב-Google Play Store — מרעיון למוצר חי.',
       app_link: 'צפה ב-Google Play ↗',
+      app2_type: 'משחק מובייל · Android · Google Play',
+      app2_title: 'Mouse Maze',
+      app2_desc: 'משחק מבוך שבו מובילים עכבר לגבינה דרך שלבים מאתגרים. פתרו חידות מתמטיקה כדי לפתוח את הדרך — מרעיון למוצר חי.',
+      app2_link: 'צפה ב-Google Play ↗',
     },
     about: {
       label: 'אודות',
@@ -217,6 +225,10 @@ const T = {
       app_title: 'One Second Challenge',
       app_desc: 'Мобильная игра на реакцию — нужно нажать в точный момент. Спроектировано, разработано и опубликовано в Google Play Store от идеи до живого продукта.',
       app_link: 'Посмотреть в Google Play ↗',
+      app2_type: 'Мобильная игра · Android · Google Play',
+      app2_title: 'Mouse Maze',
+      app2_desc: 'Лабиринт-головоломка — ведите мышь к сыру через всё более сложные уровни. Решайте математические задачи для разблокировки пути. От идеи до живого продукта.',
+      app2_link: 'Посмотреть в Google Play ↗',
     },
     about: {
       label: 'Обо мне',
@@ -298,6 +310,10 @@ const T = {
       app_title: 'One Second Challenge',
       app_desc: 'เกมมือถือทดสอบปฏิกิริยาตอบสนอง ผู้เล่นต้องแตะหน้าจอในจังหวะที่แม่นยำ ออกแบบ พัฒนา และเผยแพร่บน Google Play Store จากแนวคิดสู่ผลิตภัณฑ์จริง',
       app_link: 'ดูใน Google Play ↗',
+      app2_type: 'เกมมือถือ · Android · Google Play',
+      app2_title: 'Mouse Maze',
+      app2_desc: 'เกมเขาวงกตพาหนูไปหาชีสผ่านด่านที่ยากขึ้นเรื่อยๆ แก้โจทย์คณิตศาสตร์เพื่อปลดล็อคเส้นทาง ออกแบบ พัฒนา และเผยแพร่บน Google Play Store',
+      app2_link: 'ดูใน Google Play ↗',
     },
     about: {
       label: 'เกี่ยวกับฉัน',
@@ -489,6 +505,29 @@ function Projects({ lang }: { lang: Lang }) {
               >
                 <GooglePlayIcon />
                 {t.app_link}
+              </a>
+            </div>
+          </article>
+
+          <article className="project-card project-card--featured">
+            <div className="project-phone project-phone--maze" aria-hidden="true">
+              <div className="phone-screen">
+                <div className="phone-app-icon phone-app-icon--maze"><span>🐭</span></div>
+                <span className="phone-app-name">Mouse Maze</span>
+              </div>
+            </div>
+            <div className="project-info">
+              <span className="project-type">{t.app2_type}</span>
+              <h3 className="project-title">{t.app2_title}</h3>
+              <p className="project-desc">{t.app2_desc}</p>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.reversemaze.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                <GooglePlayIcon />
+                {t.app2_link}
               </a>
             </div>
           </article>

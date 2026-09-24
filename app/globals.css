@@ -541,14 +541,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .browser-bar {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 16px;
-  background: #111;
-  border-bottom: 1px solid var(--border);
-  flex-shrink: 0;
-  direction: ltr;
+  display: none;
 }
 
 .browser-dots {

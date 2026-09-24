@@ -548,6 +548,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   background: #111;
   border-bottom: 1px solid var(--border);
   flex-shrink: 0;
+  direction: ltr;
 }
 
 .browser-dots {

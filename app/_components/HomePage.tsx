@@ -59,6 +59,10 @@ const T = {
       app2_title: 'Mouse Maze',
       app2_desc: 'A maze puzzle game where you guide a mouse to cheese through increasingly challenging levels. Solve math puzzles to unlock path blocks — from concept to live product.',
       app2_link: 'View on Google Play ↗',
+      web_type: 'Website · WordPress · Full-Stack',
+      web_title: 'Nanosh Hair Style',
+      web_desc: 'A luxury hair salon website built from scratch — dark elegant design, Hebrew RTL, booking flow, and accessibility widget. Deployed on AWS Amplify.',
+      web_link: 'Visit website ↗',
     },
     about: {
       label: 'About',
@@ -144,6 +148,10 @@ const T = {
       app2_title: 'Mouse Maze',
       app2_desc: 'משחק מבוך שבו מובילים עכבר לגבינה דרך שלבים מאתגרים. פתרו חידות מתמטיקה כדי לפתוח את הדרך — מרעיון למוצר חי.',
       app2_link: 'צפה ב-Google Play ↗',
+      web_type: 'אתר אינטרנט · WordPress · פול-סטאק',
+      web_title: 'Nanosh Hair Style',
+      web_desc: 'אתר לסלון יוקרה לשיער — עיצוב כהה ואלגנטי, RTL עברית, תהליך הזמנה ווידג\'ט נגישות. פורסם על AWS Amplify.',
+      web_link: 'לאתר ↗',
     },
     about: {
       label: 'אודות',
@@ -229,6 +237,10 @@ const T = {
       app2_title: 'Mouse Maze',
       app2_desc: 'Лабиринт-головоломка — ведите мышь к сыру через всё более сложные уровни. Решайте математические задачи для разблокировки пути. От идеи до живого продукта.',
       app2_link: 'Посмотреть в Google Play ↗',
+      web_type: 'Сайт · WordPress · Full-Stack',
+      web_title: 'Nanosh Hair Style',
+      web_desc: 'Сайт люкс-салона красоты — тёмный элегантный дизайн, иврит RTL, процесс бронирования и виджет доступности. Опубликован на AWS Amplify.',
+      web_link: 'Перейти на сайт ↗',
     },
     about: {
       label: 'Обо мне',
@@ -314,6 +326,10 @@ const T = {
       app2_title: 'Mouse Maze',
       app2_desc: 'เกมเขาวงกตพาหนูไปหาชีสผ่านด่านที่ยากขึ้นเรื่อยๆ แก้โจทย์คณิตศาสตร์เพื่อปลดล็อคเส้นทาง ออกแบบ พัฒนา และเผยแพร่บน Google Play Store',
       app2_link: 'ดูใน Google Play ↗',
+      web_type: 'เว็บไซต์ · WordPress · Full-Stack',
+      web_title: 'Nanosh Hair Style',
+      web_desc: 'เว็บไซต์ร้านทำผมระดับหรู — ดีไซน์สีเข้มสง่างาม, ภาษาฮิบรู RTL, ระบบจอง และวิดเจ็ต accessibility เผยแพร่บน AWS Amplify',
+      web_link: 'เข้าชมเว็บไซต์ ↗',
     },
     about: {
       label: 'เกี่ยวกับฉัน',
@@ -528,6 +544,41 @@ function Projects({ lang }: { lang: Lang }) {
               >
                 <GooglePlayIcon />
                 {t.app2_link}
+              </a>
+            </div>
+          </article>
+          <article className="project-card project-card--web reveal reveal-delay-2">
+            <div className="project-browser" aria-hidden="true">
+              <div className="browser-bar">
+                <div className="browser-dots">
+                  <span /><span /><span />
+                </div>
+                <div className="browser-url">nanosh.co.il</div>
+              </div>
+              <div className="browser-viewport">
+                <iframe
+                  src="https://master.d1qv0srh4ln6z3.amplifyapp.com/"
+                  title="Nanosh Hair Style website preview"
+                  className="browser-iframe"
+                  loading="lazy"
+                  tabIndex={-1}
+                />
+              </div>
+            </div>
+            <div className="project-info project-info--web">
+              <span className="project-type">{t.web_type}</span>
+              <h3 className="project-title">{t.web_title}</h3>
+              <p className="project-desc">{t.web_desc}</p>
+              <a
+                href="https://master.d1qv0srh4ln6z3.amplifyapp.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                </svg>
+                {t.web_link}
               </a>
             </div>
           </article>

@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
 
 // ─── Types & Translations ─────────────────────────────────────────────────────
 type Lang = 'he' | 'en' | 'ru' | 'th'
@@ -691,6 +692,7 @@ type FormStatus = 'idle' | 'sending' | 'sent' | 'error'
 
 function Contact({ lang }: { lang: Lang }) {
   const t = T[lang].contact
+  const router = useRouter()
   const [status, setStatus] = useState<FormStatus>('idle')
   const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' })
   const [agreed, setAgreed] = useState(false)
@@ -712,9 +714,9 @@ function Contact({ lang }: { lang: Lang }) {
         body: JSON.stringify(form),
       })
       if (!res.ok) throw new Error()
-      setStatus('sent')
       setForm({ name: '', email: '', phone: '', message: '' })
       setAgreed(false)
+      router.push('/thank-you')
     } catch {
       setStatus('error')
     }

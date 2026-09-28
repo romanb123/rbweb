@@ -346,7 +346,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 /* ─── Hero ───────────────────────────────────────────────────────── */
-main, nav, footer, .nav, .a11y-panel, .cursor-follower {
+main, nav, footer, .nav, .cursor-follower {
   position: relative;
   z-index: 1;
 }

@@ -90,9 +90,13 @@ const T = {
       sending: 'Sending...',
       success: "Message sent! I'll get back to you soon.",
       error: 'Something went wrong. Please try again.',
+      agree: 'I agree to the use of my details for contact purposes',
+      agree_required: 'Please confirm your agreement to continue.',
     },
     footer: {
       copy: `© ${new Date().getFullYear()} Roman Besiakov. All rights reserved.`,
+      privacy: 'Privacy Policy',
+      accessibility: 'Accessibility Statement',
     },
   },
 
@@ -179,9 +183,13 @@ const T = {
       sending: 'שולח...',
       success: 'ההודעה נשלחה! אחזור אליך בקרוב.',
       error: 'משהו השתבש. נסה שנית.',
+      agree: 'אני מסכים לשימוש בפרטים שלי לצורכי יצירת קשר',
+      agree_required: 'יש לאשר את ההסכמה כדי להמשיך.',
     },
     footer: {
       copy: `© ${new Date().getFullYear()} Roman Besiakov. כל הזכויות שמורות.`,
+      privacy: 'מדיניות פרטיות',
+      accessibility: 'הצהרת נגישות',
     },
   },
 
@@ -268,9 +276,13 @@ const T = {
       sending: 'Отправка...',
       success: 'Сообщение отправлено! Скоро свяжусь с вами.',
       error: 'Что-то пошло не так. Попробуйте ещё раз.',
+      agree: 'Я согласен на использование моих данных для связи',
+      agree_required: 'Пожалуйста, подтвердите своё согласие.',
     },
     footer: {
       copy: `© ${new Date().getFullYear()} Roman Besiakov. Все права защищены.`,
+      privacy: 'Политика конфиденциальности',
+      accessibility: 'Заявление о доступности',
     },
   },
 
@@ -357,9 +369,13 @@ const T = {
       sending: 'กำลังส่ง...',
       success: 'ส่งข้อความสำเร็จ! จะติดต่อกลับเร็วๆ นี้',
       error: 'เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง',
+      agree: 'ฉันยินยอมให้ใช้ข้อมูลของฉันเพื่อการติดต่อ',
+      agree_required: 'กรุณายืนยันความยินยอมของคุณ',
     },
     footer: {
       copy: `© ${new Date().getFullYear()} Roman Besiakov. สงวนลิขสิทธิ์`,
+      privacy: 'นโยบายความเป็นส่วนตัว',
+      accessibility: 'คำชี้แจงการเข้าถึง',
     },
   },
 } as const
@@ -503,6 +519,29 @@ function Projects({ lang }: { lang: Lang }) {
         </div>
         <div className="projects-grid reveal reveal-delay-1">
           <article className="project-card project-card--featured">
+            <div className="project-phone project-phone--maze" aria-hidden="true">
+              <div className="phone-screen">
+                <div className="phone-app-icon phone-app-icon--maze"><span>🐭</span></div>
+                <span className="phone-app-name">Mouse Maze</span>
+              </div>
+            </div>
+            <div className="project-info">
+              <span className="project-type">{t.app2_type}</span>
+              <h3 className="project-title">{t.app2_title}</h3>
+              <p className="project-desc">{t.app2_desc}</p>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.reversemaze.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                <GooglePlayIcon />
+                {t.app2_link}
+              </a>
+            </div>
+          </article>
+
+          <article className="project-card project-card--featured">
             <div className="project-phone" aria-hidden="true">
               <div className="phone-screen">
                 <div className="phone-app-icon"><span>1s</span></div>
@@ -525,28 +564,6 @@ function Projects({ lang }: { lang: Lang }) {
             </div>
           </article>
 
-          <article className="project-card project-card--featured">
-            <div className="project-phone project-phone--maze" aria-hidden="true">
-              <div className="phone-screen">
-                <div className="phone-app-icon phone-app-icon--maze"><span>🐭</span></div>
-                <span className="phone-app-name">Mouse Maze</span>
-              </div>
-            </div>
-            <div className="project-info">
-              <span className="project-type">{t.app2_type}</span>
-              <h3 className="project-title">{t.app2_title}</h3>
-              <p className="project-desc">{t.app2_desc}</p>
-              <a
-                href="https://play.google.com/store/apps/details?id=com.reversemaze.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="project-link"
-              >
-                <GooglePlayIcon />
-                {t.app2_link}
-              </a>
-            </div>
-          </article>
           <article className="project-card project-card--web reveal reveal-delay-2">
             <div className="project-browser" aria-hidden="true">
               <div className="browser-bar">
@@ -676,6 +693,8 @@ function Contact({ lang }: { lang: Lang }) {
   const t = T[lang].contact
   const [status, setStatus] = useState<FormStatus>('idle')
   const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' })
+  const [agreed, setAgreed] = useState(false)
+  const [agreeError, setAgreeError] = useState(false)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
@@ -683,6 +702,8 @@ function Contact({ lang }: { lang: Lang }) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    if (!agreed) { setAgreeError(true); return }
+    setAgreeError(false)
     setStatus('sending')
     try {
       const res = await fetch('/api/contact', {
@@ -693,6 +714,7 @@ function Contact({ lang }: { lang: Lang }) {
       if (!res.ok) throw new Error()
       setStatus('sent')
       setForm({ name: '', email: '', phone: '', message: '' })
+      setAgreed(false)
     } catch {
       setStatus('error')
     }
@@ -770,6 +792,23 @@ function Contact({ lang }: { lang: Lang }) {
                 required
               />
             </div>
+            <div className="form-agree">
+              <label className={`agree-label${agreeError ? ' agree-label--error' : ''}`}>
+                <input
+                  type="checkbox"
+                  className="agree-checkbox"
+                  checked={agreed}
+                  onChange={(e) => { setAgreed(e.target.checked); setAgreeError(false) }}
+                />
+                <span className="agree-text">
+                  {t.agree}{' '}
+                  <a href="/privacy" className="agree-link" target="_blank" rel="noopener noreferrer">
+                    {T[lang].footer.privacy}
+                  </a>
+                </span>
+              </label>
+              {agreeError && <p className="form-error">{t.agree_required}</p>}
+            </div>
             {status === 'error' && <p className="form-error">{t.error}</p>}
             <button
               type="submit"
@@ -787,6 +826,7 @@ function Contact({ lang }: { lang: Lang }) {
 
 // ─── Footer ───────────────────────────────────────────────────────────────────
 function Footer({ lang }: { lang: Lang }) {
+  const t = T[lang].footer
   return (
     <footer className="footer">
       <div className="container">
@@ -795,7 +835,11 @@ function Footer({ lang }: { lang: Lang }) {
             <Logo size={32} />
             <span>RBapp</span>
           </div>
-          <span className="footer-copy">{T[lang].footer.copy}</span>
+          <div className="footer-links">
+            <a href="/privacy" className="footer-link">{t.privacy}</a>
+            <a href="/accessibility" className="footer-link">{t.accessibility}</a>
+          </div>
+          <span className="footer-copy">{t.copy}</span>
         </div>
       </div>
     </footer>

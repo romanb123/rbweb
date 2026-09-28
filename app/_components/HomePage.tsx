@@ -165,9 +165,9 @@ const T = {
       title: 'The Process',
       steps: [
         { num: '01', title: 'Discovery', desc: 'We define scope, goals, and budget. I ask the right questions so nothing surprises us later.' },
-        { num: '02', title: 'Design & Plan', desc: 'Wireframes or Figma mockups. System architecture decided before a single line of code.' },
+        { num: '02', title: 'Design & Plan', desc: 'An HTML prototype so you can see and feel the site before a single line of production code is written.' },
         { num: '03', title: 'Development', desc: 'Clean code, iterative builds, regular updates. You can review and redirect at every step.' },
-        { num: '04', title: 'Launch & Support', desc: 'Production deployment, performance checks, and post-launch support so you are never left alone.' },
+        { num: '04', title: 'Launch', desc: 'Production deployment, performance testing, and a full handoff — everything ready to go live.' },
       ],
     },
     contact: {
@@ -268,9 +268,9 @@ const T = {
       title: 'תהליך העבודה',
       steps: [
         { num: '01', title: 'פגישת היכרות', desc: 'מבינים את הצרכים, המטרות והתקציב. שואל את השאלות הנכונות כדי שלא יהיו הפתעות בדרך.' },
-        { num: '02', title: 'עיצוב ותכנון', desc: 'Wireframes או מוקאפים ב-Figma. ארכיטקטורת המערכת מוסכמת לפני שורת קוד אחת.' },
+        { num: '02', title: 'עיצוב ותכנון', desc: 'טיוטה ב-HTML כדי שתראה ותרגיש את האתר לפני שנכתבת שורת קוד אחת לפרודקשן.' },
         { num: '03', title: 'פיתוח', desc: 'קוד נקי, בנייה איטרטיבית ועדכונים שוטפים. אפשר לבדוק ולתקן כיוון בכל שלב.' },
-        { num: '04', title: 'השקה ותמיכה', desc: 'פריסה לפרודקשן, בדיקות ביצועים ותמיכה לאחר ההשקה — כדי שלא תישאר לבד.' },
+        { num: '04', title: 'השקה', desc: 'פריסה לפרודקשן, בדיקות ביצועים ומסירה מלאה — הכל מוכן לעלות לאוויר.' },
       ],
     },
     contact: {
@@ -371,9 +371,9 @@ const T = {
       title: 'Процесс работы',
       steps: [
         { num: '01', title: 'Знакомство', desc: 'Обсуждаем цели, объём и бюджет. Правильные вопросы в начале — отсутствие сюрпризов в конце.' },
-        { num: '02', title: 'Дизайн и план', desc: 'Wireframes или макеты в Figma. Архитектура системы согласована до первой строки кода.' },
+        { num: '02', title: 'Дизайн и план', desc: 'HTML-прототип, чтобы вы увидели и почувствовали сайт до написания первой строки production-кода.' },
         { num: '03', title: 'Разработка', desc: 'Чистый код, итерационная сборка, регулярные обновления. Вы можете следить и корректировать на каждом этапе.' },
-        { num: '04', title: 'Запуск и поддержка', desc: 'Деплой в production, проверка производительности и поддержка после запуска — вы не остаётесь один.' },
+        { num: '04', title: 'Запуск', desc: 'Деплой в production, тестирование производительности и полная передача — всё готово к запуску.' },
       ],
     },
     contact: {
@@ -474,9 +474,9 @@ const T = {
       title: 'ขั้นตอนการทำงาน',
       steps: [
         { num: '01', title: 'ทำความรู้จัก', desc: 'เราพูดคุยเรื่องเป้าหมาย ขอบเขต และงบประมาณ ถามคำถามที่ถูกต้องตั้งแต่ต้น เพื่อไม่ให้เกิดเรื่องไม่คาดคิด' },
-        { num: '02', title: 'ออกแบบและวางแผน', desc: 'Wireframes หรือ Figma mockup สถาปัตยกรรมระบบถูกตัดสินใจก่อนเขียนโค้ดแม้แต่บรรทัดเดียว' },
+        { num: '02', title: 'ออกแบบและวางแผน', desc: 'ต้นแบบ HTML เพื่อให้คุณเห็นและสัมผัสเว็บไซต์ก่อนเขียนโค้ด production แม้แต่บรรทัดเดียว' },
         { num: '03', title: 'พัฒนา', desc: 'โค้ดสะอาด สร้างแบบ iterative อัปเดตสม่ำเสมอ คุณสามารถตรวจสอบและปรับทิศทางได้ทุกขั้นตอน' },
-        { num: '04', title: 'เปิดตัวและซัพพอร์ต', desc: 'Deploy ขึ้น production ตรวจสอบประสิทธิภาพ และซัพพอร์ตหลังเปิดตัว — คุณจะไม่อยู่คนเดียว' },
+        { num: '04', title: 'เปิดตัว', desc: 'Deploy ขึ้น production ทดสอบประสิทธิภาพ และส่งมอบครบถ้วน — พร้อม go live ทันที' },
       ],
     },
     contact: {

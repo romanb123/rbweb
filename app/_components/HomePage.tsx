@@ -128,6 +128,12 @@ const T = {
           desc: 'Real results: from 32 to 95 on Google Lighthouse. Deep expertise in Core Web Vitals, Google Analytics 4, and Tag Manager.',
           tags: ['Lighthouse', 'GA4', 'GTM', 'Core Web Vitals'],
         },
+        {
+          num: '04',
+          title: 'Google Ads',
+          desc: 'Paid search campaigns that bring real leads — keyword research, ad copywriting, budget management, and conversion tracking.',
+          tags: ['Google Ads', 'Search Campaigns', 'Conversion Tracking', 'ROI'],
+        },
       ],
     },
     projects: {
@@ -232,6 +238,12 @@ const T = {
           desc: 'תוצאות אמיתיות: מ-32 ל-95 ב-Google Lighthouse. מומחיות ב-Core Web Vitals, Google Analytics 4 ו-Tag Manager.',
           tags: ['Lighthouse', 'GA4', 'GTM', 'Core Web Vitals'],
         },
+        {
+          num: '04',
+          title: 'קמפיינים ממומנים בגוגל',
+          desc: 'קמפיינים בגוגל שמביאים לידים אמיתיים — מחקר מילות מפתח, כתיבת מודעות, ניהול תקציב ומעקב המרות.',
+          tags: ['Google Ads', 'קמפיין חיפוש', 'מעקב המרות', 'ROI'],
+        },
       ],
     },
     projects: {
@@ -335,6 +347,12 @@ const T = {
           desc: 'Реальные результаты: с 32 до 95 в Google Lighthouse. Экспертиза в Core Web Vitals, Google Analytics 4 и Tag Manager.',
           tags: ['Lighthouse', 'GA4', 'GTM', 'Core Web Vitals'],
         },
+        {
+          num: '04',
+          title: 'Реклама в Google',
+          desc: 'Поисковые кампании, которые приводят реальные заявки — подбор ключевых слов, написание объявлений, управление бюджетом и отслеживание конверсий.',
+          tags: ['Google Ads', 'Поисковые кампании', 'Конверсии', 'ROI'],
+        },
       ],
     },
     projects: {
@@ -437,6 +455,12 @@ const T = {
           title: 'SEO และประสิทธิภาพ',
           desc: 'ผลลัพธ์จริง: จาก 32 เป็น 95 ใน Google Lighthouse ความเชี่ยวชาญใน Core Web Vitals, Google Analytics 4 และ Tag Manager',
           tags: ['Lighthouse', 'GA4', 'GTM', 'Core Web Vitals'],
+        },
+        {
+          num: '04',
+          title: 'โฆษณา Google',
+          desc: 'แคมเปญค้นหาที่นำ leads จริงมาให้ — วิจัยคำค้นหา เขียนโฆษณา จัดการงบประมาณ และติดตาม Conversion',
+          tags: ['Google Ads', 'Search Campaigns', 'Conversion Tracking', 'ROI'],
         },
       ],
     },

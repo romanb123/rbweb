@@ -503,6 +503,84 @@ const T = {
   },
 } as const
 
+// ─── Particle canvas background ───────────────────────────────────────────────
+function ParticlesBg() {
+  const canvasRef = useRef<HTMLCanvasElement>(null)
+
+  useEffect(() => {
+    const canvas = canvasRef.current
+    if (!canvas) return
+    const ctx = canvas.getContext('2d')
+    if (!ctx) return
+
+    let animId: number
+    const ACCENT = { r: 200, g: 255, b: 0 }
+    const COUNT = 55
+    const MAX_DIST = 140
+
+    const resize = () => {
+      canvas.width = canvas.offsetWidth
+      canvas.height = canvas.offsetHeight
+    }
+    resize()
+    window.addEventListener('resize', resize)
+
+    type P = { x: number; y: number; vx: number; vy: number; r: number; o: number }
+    const pts: P[] = Array.from({ length: COUNT }, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      vx: (Math.random() - 0.5) * 0.45,
+      vy: (Math.random() - 0.5) * 0.45,
+      r: Math.random() * 1.5 + 0.5,
+      o: Math.random() * 0.4 + 0.15,
+    }))
+
+    const draw = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+      for (let i = 0; i < pts.length; i++) {
+        const p = pts[i]
+        p.x += p.vx; p.y += p.vy
+        if (p.x < 0 || p.x > canvas.width) p.vx *= -1
+        if (p.y < 0 || p.y > canvas.height) p.vy *= -1
+
+        for (let j = i + 1; j < pts.length; j++) {
+          const q = pts[j]
+          const dx = p.x - q.x, dy = p.y - q.y
+          const dist = Math.sqrt(dx * dx + dy * dy)
+          if (dist < MAX_DIST) {
+            const alpha = (1 - dist / MAX_DIST) * 0.18
+            ctx.beginPath()
+            ctx.strokeStyle = `rgba(${ACCENT.r},${ACCENT.g},${ACCENT.b},${alpha})`
+            ctx.lineWidth = 0.7
+            ctx.moveTo(p.x, p.y)
+            ctx.lineTo(q.x, q.y)
+            ctx.stroke()
+          }
+        }
+
+        ctx.beginPath()
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2)
+        ctx.fillStyle = `rgba(${ACCENT.r},${ACCENT.g},${ACCENT.b},${p.o})`
+        ctx.fill()
+      }
+
+      animId = requestAnimationFrame(draw)
+    }
+
+    animId = requestAnimationFrame(draw)
+    return () => { cancelAnimationFrame(animId); window.removeEventListener('resize', resize) }
+  }, [])
+
+  return (
+    <canvas
+      ref={canvasRef}
+      style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', pointerEvents: 'none' }}
+      aria-hidden="true"
+    />
+  )
+}
+
 // ─── Logo ─────────────────────────────────────────────────────────────────────
 function Logo({ size = 38 }: { size?: number }) {
   return (
@@ -557,7 +635,7 @@ function Hero({ lang }: { lang: Lang }) {
   const t = T[lang].hero
   return (
     <section className="hero" id="home">
-      <div className="hero-grid-bg" aria-hidden="true" />
+      <ParticlesBg />
       <div className="hero-inner">
         <div className="hero-tag">
           <span className="dot-live" />

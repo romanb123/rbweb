@@ -519,8 +519,8 @@ function ParticlesBg() {
     const MAX_DIST = 140
 
     const resize = () => {
-      canvas.width = canvas.offsetWidth
-      canvas.height = canvas.offsetHeight
+      canvas.width = window.innerWidth
+      canvas.height = window.innerHeight
     }
     resize()
     window.addEventListener('resize', resize)
@@ -575,7 +575,7 @@ function ParticlesBg() {
   return (
     <canvas
       ref={canvasRef}
-      style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', pointerEvents: 'none' }}
+      style={{ position: 'fixed', inset: 0, width: '100%', height: '100%', pointerEvents: 'none', zIndex: 0 }}
       aria-hidden="true"
     />
   )
@@ -635,7 +635,6 @@ function Hero({ lang }: { lang: Lang }) {
   const t = T[lang].hero
   return (
     <section className="hero" id="home">
-      <ParticlesBg />
       <div className="hero-inner">
         <div className="hero-tag">
           <span className="dot-live" />
@@ -1099,6 +1098,7 @@ export default function HomePage({ initialLang }: { initialLang: Lang }) {
 
   return (
     <>
+      <ParticlesBg />
       <CursorFollower />
       <Nav lang={lang} onChangeLang={setLang} />
       <main>

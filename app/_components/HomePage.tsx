@@ -900,14 +900,6 @@ function About({ lang }: { lang: Lang }) {
                 </div>
               </div>
             </div>
-            <a
-              href="https://www.linkedin.com/in/roman-bessiakov54321/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-ghost"
-            >
-              {t.linkedin}
-            </a>
           </div>
         </div>
       </div>

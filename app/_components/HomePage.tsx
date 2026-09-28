@@ -515,8 +515,8 @@ function ParticlesBg() {
 
     let animId: number
     const ACCENT = { r: 200, g: 255, b: 0 }
-    const COUNT = 55
-    const MAX_DIST = 140
+    const COUNT = 28
+    const MAX_DIST = 110
 
     const resize = () => {
       canvas.width = canvas.offsetWidth
@@ -529,10 +529,10 @@ function ParticlesBg() {
     const pts: P[] = Array.from({ length: COUNT }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * 0.45,
-      vy: (Math.random() - 0.5) * 0.45,
-      r: Math.random() * 1.5 + 0.5,
-      o: Math.random() * 0.4 + 0.15,
+      vx: (Math.random() - 0.5) * 0.28,
+      vy: (Math.random() - 0.5) * 0.28,
+      r: Math.random() * 1.2 + 0.3,
+      o: Math.random() * 0.22 + 0.08,
     }))
 
     const draw = () => {
@@ -549,7 +549,7 @@ function ParticlesBg() {
           const dx = p.x - q.x, dy = p.y - q.y
           const dist = Math.sqrt(dx * dx + dy * dy)
           if (dist < MAX_DIST) {
-            const alpha = (1 - dist / MAX_DIST) * 0.18
+            const alpha = (1 - dist / MAX_DIST) * 0.09
             ctx.beginPath()
             ctx.strokeStyle = `rgba(${ACCENT.r},${ACCENT.g},${ACCENT.b},${alpha})`
             ctx.lineWidth = 0.7

@@ -552,7 +552,7 @@ function ParticlesBg() {
             const alpha = (1 - dist / MAX_DIST) * 0.18
             ctx.beginPath()
             ctx.strokeStyle = `rgba(${ACCENT.r},${ACCENT.g},${ACCENT.b},${alpha})`
-            ctx.lineWidth = 0.7
+            ctx.lineWidth = 2
             ctx.moveTo(p.x, p.y)
             ctx.lineTo(q.x, q.y)
             ctx.stroke()

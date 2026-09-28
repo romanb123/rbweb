@@ -1,7 +1,89 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
+
+// ─── Typing text animation ────────────────────────────────────────────────────
+function TypingText({ text, speed = 45, delay = 400 }: { text: string; speed?: number; delay?: number }) {
+  const [displayed, setDisplayed] = useState('')
+  const [started, setStarted] = useState(false)
+
+  useEffect(() => {
+    setDisplayed('')
+    setStarted(false)
+    const t = setTimeout(() => setStarted(true), delay)
+    return () => clearTimeout(t)
+  }, [text, delay])
+
+  useEffect(() => {
+    if (!started) return
+    if (displayed.length >= text.length) return
+    const t = setTimeout(() => setDisplayed(text.slice(0, displayed.length + 1)), speed)
+    return () => clearTimeout(t)
+  }, [displayed, started, text, speed])
+
+  return (
+    <span>
+      {displayed}
+      {displayed.length < text.length && <span className="typing-cursor" aria-hidden="true">|</span>}
+    </span>
+  )
+}
+
+// ─── Count-up animation ───────────────────────────────────────────────────────
+function CountUp({ to, suffix = '' }: { to: number; suffix?: string }) {
+  const [count, setCount] = useState(0)
+  const ref = useRef<HTMLSpanElement>(null)
+  const started = useRef(false)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting && !started.current) {
+        started.current = true
+        let start = 0
+        const duration = 1200
+        const step = 16
+        const increment = to / (duration / step)
+        const timer = setInterval(() => {
+          start += increment
+          if (start >= to) { setCount(to); clearInterval(timer) }
+          else setCount(Math.floor(start))
+        }, step)
+      }
+    }, { threshold: 0.5 })
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [to])
+
+  return <span ref={ref}>{count}{suffix}</span>
+}
+
+// ─── Cursor follower ──────────────────────────────────────────────────────────
+function CursorFollower() {
+  const ref = useRef<HTMLDivElement>(null)
+  const pos = useRef({ x: -200, y: -200 })
+  const current = useRef({ x: -200, y: -200 })
+  const raf = useRef<number>(0)
+
+  useEffect(() => {
+    const onMove = (e: MouseEvent) => { pos.current = { x: e.clientX, y: e.clientY } }
+    window.addEventListener('mousemove', onMove)
+    const loop = () => {
+      current.current.x += (pos.current.x - current.current.x) * 0.12
+      current.current.y += (pos.current.y - current.current.y) * 0.12
+      if (ref.current) {
+        ref.current.style.transform = `translate(${current.current.x - 16}px, ${current.current.y - 16}px)`
+      }
+      raf.current = requestAnimationFrame(loop)
+    }
+    raf.current = requestAnimationFrame(loop)
+    return () => { window.removeEventListener('mousemove', onMove); cancelAnimationFrame(raf.current) }
+  }, [])
+
+  return <div ref={ref} className="cursor-follower" aria-hidden="true" />
+}
 
 // ─── Types & Translations ─────────────────────────────────────────────────────
 type Lang = 'he' | 'en' | 'ru' | 'th'
@@ -77,6 +159,16 @@ const T = {
       h3_title: 'Languages',
       h3_sub: 'Hebrew (Native) · Russian (Native) · English (Advanced)',
       linkedin: 'LinkedIn Profile ↗',
+    },
+    process: {
+      label: 'How I Work',
+      title: 'The Process',
+      steps: [
+        { num: '01', title: 'Discovery', desc: 'We define scope, goals, and budget. I ask the right questions so nothing surprises us later.' },
+        { num: '02', title: 'Design & Plan', desc: 'Wireframes or Figma mockups. System architecture decided before a single line of code.' },
+        { num: '03', title: 'Development', desc: 'Clean code, iterative builds, regular updates. You can review and redirect at every step.' },
+        { num: '04', title: 'Launch & Support', desc: 'Production deployment, performance checks, and post-launch support so you are never left alone.' },
+      ],
     },
     contact: {
       label: 'Get in Touch',
@@ -171,6 +263,16 @@ const T = {
       h3_sub: 'עברית (שפת אם) · רוסית (שפת אם) · אנגלית (מתקדם)',
       linkedin: 'פרופיל LinkedIn ↗',
     },
+    process: {
+      label: 'איך אני עובד',
+      title: 'תהליך העבודה',
+      steps: [
+        { num: '01', title: 'פגישת היכרות', desc: 'מבינים את הצרכים, המטרות והתקציב. שואל את השאלות הנכונות כדי שלא יהיו הפתעות בדרך.' },
+        { num: '02', title: 'עיצוב ותכנון', desc: 'Wireframes או מוקאפים ב-Figma. ארכיטקטורת המערכת מוסכמת לפני שורת קוד אחת.' },
+        { num: '03', title: 'פיתוח', desc: 'קוד נקי, בנייה איטרטיבית ועדכונים שוטפים. אפשר לבדוק ולתקן כיוון בכל שלב.' },
+        { num: '04', title: 'השקה ותמיכה', desc: 'פריסה לפרודקשן, בדיקות ביצועים ותמיכה לאחר ההשקה — כדי שלא תישאר לבד.' },
+      ],
+    },
     contact: {
       label: 'צור קשר',
       line1: 'בואו נבנה',
@@ -263,6 +365,16 @@ const T = {
       h3_title: 'Языки',
       h3_sub: 'Иврит (родной) · Русский (родной) · Английский (продвинутый)',
       linkedin: 'Профиль LinkedIn ↗',
+    },
+    process: {
+      label: 'Как я работаю',
+      title: 'Процесс работы',
+      steps: [
+        { num: '01', title: 'Знакомство', desc: 'Обсуждаем цели, объём и бюджет. Правильные вопросы в начале — отсутствие сюрпризов в конце.' },
+        { num: '02', title: 'Дизайн и план', desc: 'Wireframes или макеты в Figma. Архитектура системы согласована до первой строки кода.' },
+        { num: '03', title: 'Разработка', desc: 'Чистый код, итерационная сборка, регулярные обновления. Вы можете следить и корректировать на каждом этапе.' },
+        { num: '04', title: 'Запуск и поддержка', desc: 'Деплой в production, проверка производительности и поддержка после запуска — вы не остаётесь один.' },
+      ],
     },
     contact: {
       label: 'Связаться',
@@ -357,6 +469,16 @@ const T = {
       h3_sub: 'ฮิบรู (เจ้าของภาษา) · รัสเซีย (เจ้าของภาษา) · อังกฤษ (ขั้นสูง)',
       linkedin: 'โปรไฟล์ LinkedIn ↗',
     },
+    process: {
+      label: 'วิธีการทำงาน',
+      title: 'ขั้นตอนการทำงาน',
+      steps: [
+        { num: '01', title: 'ทำความรู้จัก', desc: 'เราพูดคุยเรื่องเป้าหมาย ขอบเขต และงบประมาณ ถามคำถามที่ถูกต้องตั้งแต่ต้น เพื่อไม่ให้เกิดเรื่องไม่คาดคิด' },
+        { num: '02', title: 'ออกแบบและวางแผน', desc: 'Wireframes หรือ Figma mockup สถาปัตยกรรมระบบถูกตัดสินใจก่อนเขียนโค้ดแม้แต่บรรทัดเดียว' },
+        { num: '03', title: 'พัฒนา', desc: 'โค้ดสะอาด สร้างแบบ iterative อัปเดตสม่ำเสมอ คุณสามารถตรวจสอบและปรับทิศทางได้ทุกขั้นตอน' },
+        { num: '04', title: 'เปิดตัวและซัพพอร์ต', desc: 'Deploy ขึ้น production ตรวจสอบประสิทธิภาพ และซัพพอร์ตหลังเปิดตัว — คุณจะไม่อยู่คนเดียว' },
+      ],
+    },
     contact: {
       label: 'ติดต่อฉัน',
       line1: 'มาสร้าง',
@@ -439,7 +561,7 @@ function Hero({ lang }: { lang: Lang }) {
       <div className="hero-inner">
         <div className="hero-tag">
           <span className="dot-live" />
-          <span>{t.tag}</span>
+          <TypingText text={t.tag} speed={38} delay={300} />
         </div>
         <div className="hero-headline">
           <h1>
@@ -462,7 +584,9 @@ function Hero({ lang }: { lang: Lang }) {
         </div>
         <div className="hero-stats">
           <div className="stat">
-            <span className="stat-num">{t.stat_num}</span>
+            <span className="stat-num">
+              <CountUp to={5} suffix="+" />
+            </span>
             <span className="stat-label">{t.stat_label}</span>
           </div>
         </div>
@@ -600,6 +724,33 @@ function Projects({ lang }: { lang: Lang }) {
               </a>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// ─── Process ──────────────────────────────────────────────────────────────────
+function Process({ lang }: { lang: Lang }) {
+  const t = T[lang].process
+  return (
+    <section className="process" id="process">
+      <div className="container">
+        <div className="section-header reveal">
+          <span className="section-label">{t.label}</span>
+          <h2 className="section-title">{t.title}</h2>
+        </div>
+        <div className="process-steps">
+          {t.steps.map((step, i) => (
+            <div key={step.num} className={`process-step reveal reveal-delay-${i + 1}`}>
+              <div className="process-step-num">{step.num}</div>
+              <div className="process-step-line" aria-hidden="true" />
+              <div className="process-step-content">
+                <h3 className="process-step-title">{step.title}</h3>
+                <p className="process-step-desc">{step.desc}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -870,11 +1021,13 @@ export default function HomePage({ initialLang }: { initialLang: Lang }) {
 
   return (
     <>
+      <CursorFollower />
       <Nav lang={lang} onChangeLang={setLang} />
       <main>
         <Hero lang={lang} />
         <Services lang={lang} />
         <Projects lang={lang} />
+        <Process lang={lang} />
         <TechStack />
         <About lang={lang} />
         <Contact lang={lang} />

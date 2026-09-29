@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Syne, IBM_Plex_Mono, Rubik, Sarabun } from 'next/font/google'
+import Script from 'next/script'
 import Accessibility from './_components/Accessibility'
 import CookieBanner from './_components/CookieBanner'
 import './globals.css'
@@ -46,6 +47,25 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       dir="rtl"
       className={`${syne.variable} ${ibmPlexMono.variable} ${rubik.variable} ${sarabun.variable}`}
     >
+      <head>
+        {/* Google Consent Mode v2 — initializes denied before user chooses */}
+        <Script id="gcm-init" strategy="beforeInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('consent', 'default', {
+            analytics_storage: 'denied',
+            ad_storage: 'denied',
+            wait_for_update: 500
+          });
+        `}</Script>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-4RD1EM3RS7" strategy="afterInteractive" />
+        <Script id="ga-init" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-4RD1EM3RS7');
+        `}</Script>
+      </head>
       <body>
         {children}
         <Accessibility />

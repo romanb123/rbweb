@@ -2,34 +2,25 @@
 
 import { useEffect, useState } from 'react'
 
+function grantConsent() {
+  if (typeof window === 'undefined') return
+  ;(window as any).dataLayer = (window as any).dataLayer || []
+  function gtag(...args: any[]) { (window as any).dataLayer.push(args) }
+  gtag('consent', 'update', { analytics_storage: 'granted', ad_storage: 'granted' })
+}
+
 export default function CookieBanner() {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
     const consent = localStorage.getItem('cookie_consent')
     if (!consent) setVisible(true)
-    if (consent === 'accepted') loadGA()
+    if (consent === 'accepted') grantConsent()
   }, [])
-
-  function loadGA() {
-    if (typeof window === 'undefined') return
-    if ((window as any).__ga_loaded) return
-    ;(window as any).__ga_loaded = true
-    const s = document.createElement('script')
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-4RD1EM3RS7'
-    s.async = true
-    document.head.appendChild(s)
-    s.onload = () => {
-      ;(window as any).dataLayer = (window as any).dataLayer || []
-      function gtag(...args: any[]) { (window as any).dataLayer.push(args) }
-      gtag('js', new Date())
-      gtag('config', 'G-4RD1EM3RS7')
-    }
-  }
 
   function accept() {
     localStorage.setItem('cookie_consent', 'accepted')
-    loadGA()
+    grantConsent()
     setVisible(false)
   }
 

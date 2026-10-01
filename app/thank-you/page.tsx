@@ -1,10 +1,15 @@
-import Link from 'next/link'
+'use client'
 
-export const metadata = {
-  title: 'תודה על פנייתך | RBapp',
-}
+import Link from 'next/link'
+import { useEffect } from 'react'
 
 export default function ThankYouPage() {
+  useEffect(() => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      ;(window as any).gtag('event', 'conversion', { send_to: 'AW-16917889561/581UCN7By4wdEJmEioM_' })
+    }
+  }, [])
+
   return (
     <main style={{ background: '#060606', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'monospace', padding: '24px', textAlign: 'center', direction: 'rtl' }}>
       <div>

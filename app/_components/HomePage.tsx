@@ -134,6 +134,12 @@ const T = {
           desc: 'Paid search campaigns that bring real leads — keyword research, ad copywriting, budget management, and conversion tracking.',
           tags: ['Google Ads', 'Search Campaigns', 'Conversion Tracking', 'ROI'],
         },
+        {
+          num: '05',
+          title: 'AI Agents for Business',
+          desc: 'Custom AI agents that automate real business workflows — lead qualification, customer support, internal tools, and data processing. Integrated directly into your existing systems.',
+          tags: ['AI Agents', 'Automation', 'OpenAI', 'n8n', 'API Integration'],
+        },
       ],
     },
     projects: {
@@ -244,6 +250,12 @@ const T = {
           desc: 'קמפיינים בגוגל שמביאים לידים אמיתיים — מחקר מילות מפתח, כתיבת מודעות, ניהול תקציב ומעקב המרות.',
           tags: ['Google Ads', 'קמפיין חיפוש', 'מעקב המרות', 'ROI'],
         },
+        {
+          num: '05',
+          title: 'סוכני AI לעסקים',
+          desc: 'סוכני AI מותאמים אישית שמבצעים תהליכים עסקיים אוטומטית — סינון לידים, שירות לקוחות, כלים פנימיים ועיבוד נתונים. אינטגרציה ישירה למערכות הקיימות שלך.',
+          tags: ['סוכני AI', 'אוטומציה', 'OpenAI', 'n8n', 'אינטגרציות API'],
+        },
       ],
     },
     projects: {
@@ -352,6 +364,12 @@ const T = {
           title: 'Реклама в Google',
           desc: 'Поисковые кампании, которые приводят реальные заявки — подбор ключевых слов, написание объявлений, управление бюджетом и отслеживание конверсий.',
           tags: ['Google Ads', 'Поисковые кампании', 'Конверсии', 'ROI'],
+        },
+        {
+          num: '05',
+          title: 'AI-агенты для бизнеса',
+          desc: 'Индивидуальные AI-агенты, которые автоматизируют реальные бизнес-процессы — квалификация лидов, поддержка клиентов, внутренние инструменты и обработка данных. Прямая интеграция в ваши существующие системы.',
+          tags: ['AI-агенты', 'Автоматизация', 'OpenAI', 'n8n', 'API интеграция'],
         },
       ],
     },

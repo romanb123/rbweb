@@ -818,7 +818,7 @@ function Projects({ lang }: { lang: Lang }) {
               </div>
               <div className="browser-viewport">
                 <iframe
-                  src="https://master.d1qv0srh4ln6z3.amplifyapp.com/"
+                  src="https://a0eca2c4.nanosh-hair-style.pages.dev/"
                   title="Nanosh Hair Style website preview"
                   className="browser-iframe"
                   loading="lazy"
@@ -831,7 +831,7 @@ function Projects({ lang }: { lang: Lang }) {
               <h3 className="project-title">{t.web_title}</h3>
               <p className="project-desc">{t.web_desc}</p>
               <a
-                href="https://master.d1qv0srh4ln6z3.amplifyapp.com/"
+                href="https://a0eca2c4.nanosh-hair-style.pages.dev/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="project-link"

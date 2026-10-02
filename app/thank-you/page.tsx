@@ -8,7 +8,7 @@ export const runtime = 'edge'
 export default function ThankYouPage() {
   useEffect(() => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', 'conversion', { send_to: 'AW-16917889561/581UCN7By4wdEJmEioM_' })
+      ;(window as any).gtag('event', 'conversion', { send_to: 'AW-16917889561/AepJCP_79Y0dEJmEioM_', value: 1.0, currency: 'ILS' })
     }
   }, [])
 

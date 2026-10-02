@@ -1,12 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
-import getConfig from 'next/config'
+
+export const runtime = 'edge'
 
 export async function GET() {
-  const { serverRuntimeConfig } = getConfig()
   return NextResponse.json({
-    hasKey: !!serverRuntimeConfig?.RESEND_API_KEY,
-    keyLength: serverRuntimeConfig?.RESEND_API_KEY?.length ?? 0,
+    hasKey: !!process.env.RESEND_API_KEY,
+    keyLength: process.env.RESEND_API_KEY?.length ?? 0,
   })
 }
 
@@ -18,8 +18,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Missing fields' }, { status: 400 })
     }
 
-    const { serverRuntimeConfig } = getConfig()
-    const resend = new Resend(serverRuntimeConfig?.RESEND_API_KEY)
+    const resend = new Resend(process.env.RESEND_API_KEY)
 
     await resend.emails.send({
       from: 'RBapp <onboarding@resend.dev>',

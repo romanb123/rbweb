@@ -1,7 +1,10 @@
+import { setupDevPlatform } from '@cloudflare/next-on-pages/next-dev'
+
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  serverRuntimeConfig: {
-    RESEND_API_KEY: process.env.RESEND_API_KEY,
-  },
+const nextConfig = {}
+
+if (process.env.NODE_ENV === 'development') {
+  await setupDevPlatform()
 }
+
 export default nextConfig

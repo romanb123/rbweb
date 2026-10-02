@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { Syne, IBM_Plex_Mono, Rubik, Sarabun } from 'next/font/google'
+
+export const runtime = 'edge'
 import Script from 'next/script'
 import Accessibility from './_components/Accessibility'
 import CookieBanner from './_components/CookieBanner'

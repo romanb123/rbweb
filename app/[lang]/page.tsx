@@ -2,6 +2,8 @@ import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import HomePage from '../_components/HomePage'
 
+export const runtime = 'edge'
+
 type Lang = 'he' | 'en' | 'ru' | 'th'
 
 const LANGS: Lang[] = ['he', 'en', 'ru', 'th']

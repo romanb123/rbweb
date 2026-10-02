@@ -1,5 +1,7 @@
 import Link from 'next/link'
 
+export const runtime = 'edge'
+
 export const metadata = {
   title: 'מדיניות פרטיות | RBapp',
   description: 'מדיניות הפרטיות של RBapp',

@@ -3,6 +3,8 @@
 import Link from 'next/link'
 import { useEffect } from 'react'
 
+export const runtime = 'edge'
+
 export default function ThankYouPage() {
   useEffect(() => {
     if (typeof window !== 'undefined' && (window as any).gtag) {

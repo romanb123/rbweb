@@ -130,7 +130,7 @@ html.a11y-big-cursor * {
 }
 .a11y-shortcut {
   font-size: 0.62rem; color: rgba(90,90,90,0.6);
-  font-family: var(--font-mono), monospace;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 /* ─── Cookie banner ───────────────────────────────────────────────── */
@@ -202,26 +202,26 @@ html.a11y-big-cursor * {
   --text-mid: #999;
   --border: #1c1c1c;
   --border-light: #252525;
-  --font-display: var(--font-syne), var(--font-rubik), sans-serif;
-  --font-body: var(--font-mono), monospace;
+  --font-display: 'Syne', 'Rubik', sans-serif;
+  --font-body: 'IBM Plex Mono', monospace;
   --radius: 12px;
   --nav-h: 72px;
 }
 
 /* Hebrew mode: switch to Rubik which supports Hebrew glyphs */
 html[dir="rtl"] {
-  --font-display: var(--font-rubik), sans-serif;
-  --font-body: var(--font-rubik), sans-serif;
+  --font-display: 'Rubik', sans-serif;
+  --font-body: 'Rubik', sans-serif;
 }
 /* Russian: Rubik supports Cyrillic */
 html[lang="ru"] {
-  --font-display: var(--font-rubik), sans-serif;
-  --font-body: var(--font-rubik), sans-serif;
+  --font-display: 'Rubik', sans-serif;
+  --font-body: 'Rubik', sans-serif;
 }
 /* Thai: Sarabun */
 html[lang="th"] {
-  --font-display: var(--font-sarabun), sans-serif;
-  --font-body: var(--font-sarabun), sans-serif;
+  --font-display: 'Sarabun', sans-serif;
+  --font-body: 'Sarabun', sans-serif;
 }
 
 /* ─── Reset ──────────────────────────────────────────────────────── */

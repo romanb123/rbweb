@@ -1,39 +1,10 @@
 import type { Metadata } from 'next'
-import { Syne, IBM_Plex_Mono, Rubik, Sarabun } from 'next/font/google'
 
 export const runtime = 'edge'
 import Script from 'next/script'
 import Accessibility from './_components/Accessibility'
 import CookieBanner from './_components/CookieBanner'
 import './globals.css'
-
-const syne = Syne({
-  subsets: ['latin'],
-  variable: '--font-syne',
-  weight: ['400', '600', '700', '800'],
-  display: 'swap',
-})
-
-const ibmPlexMono = IBM_Plex_Mono({
-  subsets: ['latin'],
-  variable: '--font-mono',
-  weight: ['400', '500'],
-  display: 'swap',
-})
-
-const rubik = Rubik({
-  subsets: ['latin', 'hebrew', 'cyrillic'],
-  variable: '--font-rubik',
-  weight: ['400', '500', '700', '800'],
-  display: 'swap',
-})
-
-const sarabun = Sarabun({
-  subsets: ['thai', 'latin'],
-  variable: '--font-sarabun',
-  weight: ['400', '500', '700', '800'],
-  display: 'swap',
-})
 
 export const metadata: Metadata = {
   title: 'RBapp — מפתח Full-Stack | Web & App Developer',
@@ -45,12 +16,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="he"
-      dir="rtl"
-      className={`${syne.variable} ${ibmPlexMono.variable} ${rubik.variable} ${sarabun.variable}`}
-    >
+    <html lang="he" dir="rtl">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
+        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Rubik:ital,wght@0,400;0,500;0,700;0,800&family=Sarabun:wght@400;500;700;800&display=swap" rel="stylesheet" />
         {/* Google Consent Mode v2 — initializes denied before user chooses */}
         <Script id="gcm-init" strategy="beforeInteractive">{`
           window.dataLayer = window.dataLayer || [];

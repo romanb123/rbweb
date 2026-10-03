@@ -145,6 +145,15 @@ const T = {
     projects: {
       label: 'Featured Work',
       title: 'Projects',
+      sofia_type: 'Website · Next.js · Therapy & Coaching',
+      sofia_title: 'Sofia Besiakov — Emotional Therapist',
+      sofia_desc: 'A bilingual (Russian & Hebrew) website for an emotional therapist and coach. Soft elegant design, booking flow, and a deep personal story — built to convert visitors into clients.',
+      sofia_link: 'Visit website ↗',
+      popup_label: '🎉 New Project',
+      popup_title: 'Just Launched!',
+      popup_text: 'A brand-new website for Sofia Besiakov — emotional therapist & coach. Minimalist, warm, and built to connect.',
+      popup_cta: 'View Project ↗',
+      popup_close: 'Close',
       app_type: 'Mobile App · Android · Google Play',
       app_title: 'One Second Challenge',
       app_desc:
@@ -261,6 +270,15 @@ const T = {
     projects: {
       label: 'עבודות נבחרות',
       title: 'פרויקטים',
+      sofia_type: 'אתר אינטרנט · Next.js · טיפול רגשי',
+      sofia_title: 'סופיה בסיאקוב — מטפלת רגשית',
+      sofia_desc: 'אתר דו-לשוני (רוסית ועברית) למטפלת רגשית ומאמנת. עיצוב אלגנטי ועדין, תהליך הרשמה לפגישות, וסיפור אישי עמוק — כדי להפוך מבקרים ללקוחות.',
+      sofia_link: 'כניסה לאתר ↗',
+      popup_label: '🎉 פרויקט חדש',
+      popup_title: 'השקנו פרויקט חדש!',
+      popup_text: 'אתר חדש לסופיה בסיאקוב — מטפלת רגשית ומאמנת. מינימליסטי, חם ובנוי לחבר בין אנשים.',
+      popup_cta: 'לצפייה בפרויקט ↗',
+      popup_close: 'סגירה',
       app_type: 'אפליקציית מובייל · Android · Google Play',
       app_title: 'One Second Challenge',
       app_desc: 'משחק מובייל מבוסס רפלקסים שבו השחקן חייב ללחוץ ברגע המדויק. עוצב, פותח ופורסם ב-Google Play Store — מרעיון למוצר חי.',
@@ -376,6 +394,15 @@ const T = {
     projects: {
       label: 'Избранные работы',
       title: 'Проекты',
+      sofia_type: 'Сайт · Next.js · Психология и коучинг',
+      sofia_title: 'София Бесяков — эмоциональный терапевт',
+      sofia_desc: 'Двуязычный сайт (русский и иврит) для эмоционального терапевта и коуча. Элегантный мягкий дизайн, запись на сессии и глубокая личная история — создан для превращения посетителей в клиентов.',
+      sofia_link: 'Перейти на сайт ↗',
+      popup_label: '🎉 Новый проект',
+      popup_title: 'Только что запустили!',
+      popup_text: 'Новый сайт для Софии Бесяков — эмоционального терапевта и коуча. Минималистичный, тёплый и созданный для настоящего контакта.',
+      popup_cta: 'Смотреть проект ↗',
+      popup_close: 'Закрыть',
       app_type: 'Мобильное приложение · Android · Google Play',
       app_title: 'One Second Challenge',
       app_desc: 'Мобильная игра на реакцию — нужно нажать в точный момент. Спроектировано, разработано и опубликовано в Google Play Store от идеи до живого продукта.',
@@ -485,6 +512,15 @@ const T = {
     projects: {
       label: 'ผลงานเด่น',
       title: 'ผลงาน',
+      sofia_type: 'เว็บไซต์ · Next.js · การบำบัดและโค้ชชิ่ง',
+      sofia_title: 'โซเฟีย เบสยาคอฟ — นักบำบัดอารมณ์',
+      sofia_desc: 'เว็บไซต์สองภาษา (รัสเซีย-ฮีบรู) สำหรับนักบำบัดอารมณ์และโค้ช ดีไซน์สวยงามอ่อนหวาน ระบบจองนัดหมาย และเรื่องราวส่วนตัวที่ลึกซึ้ง — สร้างเพื่อเปลี่ยนผู้เยี่ยมชมให้เป็นลูกค้า',
+      sofia_link: 'เยี่ยมชมเว็บไซต์ ↗',
+      popup_label: '🎉 โปรเจกต์ใหม่',
+      popup_title: 'เพิ่งเปิดตัว!',
+      popup_text: 'เว็บไซต์ใหม่ของโซเฟีย เบสยาคอฟ — นักบำบัดอารมณ์และโค้ช เรียบง่าย อบอุ่น และออกแบบมาเพื่อสร้างความเชื่อมต่อที่แท้จริง',
+      popup_cta: 'ดูโปรเจกต์ ↗',
+      popup_close: 'ปิด',
       app_type: 'แอปมือถือ · Android · Google Play',
       app_title: 'One Second Challenge',
       app_desc: 'เกมมือถือทดสอบปฏิกิริยาตอบสนอง ผู้เล่นต้องแตะหน้าจอในจังหวะที่แม่นยำ ออกแบบ พัฒนา และเผยแพร่บน Google Play Store จากแนวคิดสู่ผลิตภัณฑ์จริง',
@@ -762,6 +798,35 @@ function Projects({ lang }: { lang: Lang }) {
           <h2 className="section-title">{t.title}</h2>
         </div>
         <div className="projects-grid reveal reveal-delay-1">
+          <article className="project-card project-card--web project-card--sofia reveal">
+            <div className="project-sofia-mockup" aria-hidden="true">
+              <div className="sofia-desktop-frame">
+                <div className="sofia-browser-bar">
+                  <div className="sofia-browser-dots"><span /><span /><span /></div>
+                  <div className="sofia-browser-url">sofia-terapia.com</div>
+                </div>
+                <img src="/sofia-desktop.png" alt="Sofia Terapia desktop" className="sofia-desktop-img" loading="lazy" />
+              </div>
+              <div className="sofia-mobile-frame">
+                <div className="sofia-mobile-notch" />
+                <img src="/sofia-mobile.png" alt="Sofia Terapia mobile" className="sofia-mobile-img" loading="lazy" />
+              </div>
+            </div>
+            <div className="project-info project-info--web">
+              <span className="project-type">{t.sofia_type}</span>
+              <h3 className="project-title">{t.sofia_title}</h3>
+              <p className="project-desc">{t.sofia_desc}</p>
+              <a
+                href="https://sofia-terapia.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                {t.sofia_link}
+              </a>
+            </div>
+          </article>
+
           <article className="project-card project-card--featured">
             <div className="project-phone project-phone--maze" aria-hidden="true">
               <div className="phone-screen">
@@ -1110,6 +1175,48 @@ function Footer({ lang }: { lang: Lang }) {
   )
 }
 
+// ─── New Project Popup ────────────────────────────────────────────────────────
+function NewProjectPopup({ lang }: { lang: Lang }) {
+  const [visible, setVisible] = useState(false)
+  const [dismissed, setDismissed] = useState(false)
+  const t = T[lang].projects
+
+  useEffect(() => {
+    try {
+      if (localStorage.getItem('sofia_popup_dismissed')) { setDismissed(true); return }
+    } catch {}
+    const timer = setTimeout(() => setVisible(true), 2500)
+    return () => clearTimeout(timer)
+  }, [])
+
+  const close = () => {
+    setVisible(false)
+    try { localStorage.setItem('sofia_popup_dismissed', '1') } catch {}
+  }
+
+  if (dismissed || !visible) return null
+
+  return (
+    <div className="np-overlay" role="dialog" aria-modal="true" aria-label={t.popup_title} onClick={close}>
+      <div className="np-card" onClick={(e) => e.stopPropagation()}>
+        <button className="np-close" onClick={close} aria-label={t.popup_close}>✕</button>
+        <div className="np-badge">{t.popup_label}</div>
+        <h2 className="np-title">{t.popup_title}</h2>
+        <p className="np-text">{t.popup_text}</p>
+        <a
+          href="https://sofia-terapia.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="np-cta"
+          onClick={close}
+        >
+          {t.popup_cta}
+        </a>
+      </div>
+    </div>
+  )
+}
+
 // ─── Page ─────────────────────────────────────────────────────────────────────
 export default function HomePage({ initialLang }: { initialLang: Lang }) {
   const [lang, setLang] = useState<Lang>(initialLang)
@@ -1145,6 +1252,7 @@ export default function HomePage({ initialLang }: { initialLang: Lang }) {
         <Contact lang={lang} />
       </main>
       <Footer lang={lang} />
+      <NewProjectPopup lang={lang} />
       <a
         href="https://wa.me/972528050055"
         className="whatsapp-fab"

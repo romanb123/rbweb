@@ -1355,3 +1355,213 @@ html[lang="th"] .hero-line { font-size: clamp(30px, 8vw, 90px); }
   .form-row { grid-template-columns: 1fr; }
   .footer-inner { flex-direction: column; gap: 16px; text-align: center; }
 }
+
+/* ─── Sofia project card ──────────────────────────────────────────────────────── */
+.project-card--sofia {
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  overflow: visible;
+}
+
+.project-sofia-mockup {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: flex-end;
+}
+
+.sofia-desktop-frame {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 82%;
+  background: #1a1a1a;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,.6);
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.sofia-browser-bar {
+  background: #252525;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+.sofia-browser-dots {
+  display: flex;
+  gap: 4px;
+}
+
+.sofia-browser-dots span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.15);
+}
+
+.sofia-browser-url {
+  font-size: 10px;
+  color: rgba(255,255,255,.35);
+  font-family: var(--font-mono, monospace);
+}
+
+.sofia-desktop-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: top;
+}
+
+.sofia-mobile-frame {
+  position: absolute;
+  right: 0;
+  bottom: -16px;
+  width: 28%;
+  background: #1a1a1a;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(0,0,0,.7);
+  border: 1px solid rgba(255,255,255,.1);
+  z-index: 2;
+}
+
+.sofia-mobile-notch {
+  height: 8px;
+  background: #252525;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sofia-mobile-notch::after {
+  content: '';
+  display: block;
+  width: 30%;
+  height: 4px;
+  background: rgba(255,255,255,.1);
+  border-radius: 2px;
+}
+
+.sofia-mobile-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 9/19;
+  object-fit: cover;
+  object-position: top;
+}
+
+@media (max-width: 900px) {
+  .project-card--sofia { grid-template-columns: 1fr; }
+  .project-sofia-mockup { aspect-ratio: 16/9; }
+}
+
+/* ─── New Project Popup ──────────────────────────────────────────────────────── */
+.np-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0,0,0,.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 32px;
+  animation: np-fade-in .3s ease;
+}
+
+@keyframes np-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.np-card {
+  position: relative;
+  background: #0d0d0d;
+  border: 1px solid rgba(200, 255, 0, .35);
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 340px;
+  width: 100%;
+  box-shadow: 0 24px 80px rgba(0,0,0,.8), 0 0 40px rgba(200,255,0,.05);
+  animation: np-slide-in .35s cubic-bezier(.22,1,.36,1);
+}
+
+@keyframes np-slide-in {
+  from { transform: translateY(24px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.np-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,.4);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: color .2s, background .2s;
+}
+
+.np-close:hover { color: #fff; background: rgba(255,255,255,.08); }
+
+.np-badge {
+  display: inline-block;
+  background: rgba(200,255,0,.12);
+  color: #c8ff00;
+  font-size: 11px;
+  font-family: var(--font-mono, monospace);
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.np-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 10px;
+  letter-spacing: -.02em;
+  line-height: 1.2;
+}
+
+.np-text {
+  font-size: 14px;
+  color: rgba(255,255,255,.55);
+  line-height: 1.65;
+  margin: 0 0 24px;
+}
+
+.np-cta {
+  display: inline-block;
+  background: #c8ff00;
+  color: #000;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: opacity .2s;
+}
+
+.np-cta:hover { opacity: .85; }
+
+@media (max-width: 640px) {
+  .np-overlay { padding: 16px; align-items: flex-end; justify-content: stretch; }
+  .np-card { max-width: 100%; }
+}

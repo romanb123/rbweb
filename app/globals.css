@@ -1664,8 +1664,8 @@ html[lang="th"] .hero-line { font-size: clamp(30px, 8vw, 90px); }
 .np-cta:hover { opacity: .85; }
 
 @media (max-width: 640px) {
-  .np-overlay { padding: 16px; align-items: flex-end; }
-  .np-card { max-width: 100%; border-radius: 12px 12px 0 0; }
+  .np-overlay { padding: 16px; align-items: center; }
+  .np-card { max-width: 100%; border-radius: 12px; }
   .np-mockup { height: 160px; }
   .np-desktop-img { height: 120px; }
   .np-mobile-img { height: 140px; }

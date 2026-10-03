@@ -809,7 +809,7 @@ function Projects({ lang }: { lang: Lang }) {
               </div>
               <div className="sofia-mobile-frame">
                 <div className="sofia-mobile-notch" />
-                <img src="/sofia-mobile.png" alt="Sofia Terapia mobile" className="sofia-mobile-img" loading="lazy" />
+                <img src="/sofia-mobile-v2.png" alt="Sofia Terapia mobile" className="sofia-mobile-img" loading="lazy" />
               </div>
             </div>
             <div className="project-info project-info--web">
@@ -1210,7 +1210,7 @@ function NewProjectPopup({ lang }: { lang: Lang }) {
           </div>
           <div className="np-mobile-frame">
             <div className="np-mobile-notch" />
-            <img src="/sofia-mobile.png" alt="" className="np-mobile-img" />
+            <img src="/sofia-mobile-v2.png" alt="" className="np-mobile-img" />
           </div>
         </div>
         <div className="np-body">

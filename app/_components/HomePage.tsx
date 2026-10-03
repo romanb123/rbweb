@@ -149,6 +149,10 @@ const T = {
       sofia_title: 'Sofia Besiakov — Emotional Therapist',
       sofia_desc: 'A bilingual (Russian & Hebrew) website for an emotional therapist and coach. Soft elegant design, booking flow, and a deep personal story — built to convert visitors into clients.',
       sofia_link: 'Visit website ↗',
+      maslul_type: 'Website · Travel Agency · Hebrew',
+      maslul_title: 'Maslul Nadir — RareRote Travel',
+      maslul_desc: 'A full travel agency website for unique, off-the-beaten-path routes. Hotels, flights, packages, personal guides — all from the first consultation to returning home.',
+      maslul_link: 'Visit website ↗',
       popup_label: '🎉 New Project',
       popup_title: 'Just Launched!',
       popup_text: 'A brand-new website for Sofia Besiakov — emotional therapist & coach. Minimalist, warm, and built to connect.',
@@ -274,6 +278,10 @@ const T = {
       sofia_title: 'סופיה בסיאקוב — מטפלת רגשית',
       sofia_desc: 'אתר דו-לשוני (רוסית ועברית) למטפלת רגשית ומאמנת. עיצוב אלגנטי ועדין, תהליך הרשמה לפגישות, וסיפור אישי עמוק — כדי להפוך מבקרים ללקוחות.',
       sofia_link: 'כניסה לאתר ↗',
+      maslul_type: 'אתר אינטרנט · סוכנות נסיעות · עברית',
+      maslul_title: 'מסלול נדיר — RareRote',
+      maslul_desc: 'אתר מלא לסוכנות נסיעות המתמחה במסלולים נדירים ובלתי שגרתיים. טיסות, מלונות, חבילות וליווי אישי — מהרעיון הראשון ועד חזרה הביתה.',
+      maslul_link: 'כניסה לאתר ↗',
       popup_label: '🎉 פרויקט חדש',
       popup_title: 'השקנו פרויקט חדש!',
       popup_text: 'אתר חדש לסופיה בסיאקוב — מטפלת רגשית ומאמנת. מינימליסטי, חם ובנוי לחבר בין אנשים.',
@@ -398,6 +406,10 @@ const T = {
       sofia_title: 'София Бесяков — эмоциональный терапевт',
       sofia_desc: 'Двуязычный сайт (русский и иврит) для эмоционального терапевта и коуча. Элегантный мягкий дизайн, запись на сессии и глубокая личная история — создан для превращения посетителей в клиентов.',
       sofia_link: 'Перейти на сайт ↗',
+      maslul_type: 'Сайт · Туристическое агентство · Иврит',
+      maslul_title: 'Maslul Nadir — RareRote',
+      maslul_desc: 'Полноценный сайт для туристического агентства, специализирующегося на редких и нестандартных маршрутах. Перелёты, отели, пакеты и личное сопровождение — от первой встречи до возвращения домой.',
+      maslul_link: 'Перейти на сайт ↗',
       popup_label: '🎉 Новый проект',
       popup_title: 'Только что запустили!',
       popup_text: 'Новый сайт для Софии Бесяков — эмоционального терапевта и коуча. Минималистичный, тёплый и созданный для настоящего контакта.',
@@ -516,6 +528,10 @@ const T = {
       sofia_title: 'โซเฟีย เบสยาคอฟ — นักบำบัดอารมณ์',
       sofia_desc: 'เว็บไซต์สองภาษา (รัสเซีย-ฮีบรู) สำหรับนักบำบัดอารมณ์และโค้ช ดีไซน์สวยงามอ่อนหวาน ระบบจองนัดหมาย และเรื่องราวส่วนตัวที่ลึกซึ้ง — สร้างเพื่อเปลี่ยนผู้เยี่ยมชมให้เป็นลูกค้า',
       sofia_link: 'เยี่ยมชมเว็บไซต์ ↗',
+      maslul_type: 'เว็บไซต์ · บริษัทท่องเที่ยว · ภาษาฮีบรู',
+      maslul_title: 'Maslul Nadir — RareRote',
+      maslul_desc: 'เว็บไซต์ครบวงจรสำหรับบริษัทท่องเที่ยวที่เชี่ยวชาญเส้นทางหายากและแปลกใหม่ ตั๋วเครื่องบิน โรงแรม แพ็กเกจ และไกด์ส่วนตัว — ตั้งแต่การนัดหมายครั้งแรกจนถึงกลับบ้าน',
+      maslul_link: 'เยี่ยมชมเว็บไซต์ ↗',
       popup_label: '🎉 โปรเจกต์ใหม่',
       popup_title: 'เพิ่งเปิดตัว!',
       popup_text: 'เว็บไซต์ใหม่ของโซเฟีย เบสยาคอฟ — นักบำบัดอารมณ์และโค้ช เรียบง่าย อบอุ่น และออกแบบมาเพื่อสร้างความเชื่อมต่อที่แท้จริง',
@@ -823,6 +839,35 @@ function Projects({ lang }: { lang: Lang }) {
                 className="project-link"
               >
                 {t.sofia_link}
+              </a>
+            </div>
+          </article>
+
+          <article className="project-card project-card--web project-card--maslul reveal">
+            <div className="project-sofia-mockup" aria-hidden="true">
+              <div className="sofia-desktop-frame">
+                <div className="sofia-browser-bar">
+                  <div className="sofia-browser-dots"><span /><span /><span /></div>
+                  <div className="sofia-browser-url">maslul-nadir.co.il</div>
+                </div>
+                <img src="/maslul-desktop.png" alt="Maslul Nadir desktop" className="sofia-desktop-img" loading="lazy" />
+              </div>
+              <div className="sofia-mobile-frame">
+                <div className="sofia-mobile-notch" />
+                <img src="/maslul-mobile.png" alt="Maslul Nadir mobile" className="sofia-mobile-img" loading="lazy" />
+              </div>
+            </div>
+            <div className="project-info project-info--web">
+              <span className="project-type">{t.maslul_type}</span>
+              <h3 className="project-title">{t.maslul_title}</h3>
+              <p className="project-desc">{t.maslul_desc}</p>
+              <a
+                href="https://maslul-nadir.co.il"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                {t.maslul_link}
               </a>
             </div>
           </article>

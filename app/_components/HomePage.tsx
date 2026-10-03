@@ -1200,18 +1200,33 @@ function NewProjectPopup({ lang }: { lang: Lang }) {
     <div className="np-overlay" role="dialog" aria-modal="true" aria-label={t.popup_title} onClick={close}>
       <div className="np-card" onClick={(e) => e.stopPropagation()}>
         <button className="np-close" onClick={close} aria-label={t.popup_close}>✕</button>
-        <div className="np-badge">{t.popup_label}</div>
-        <h2 className="np-title">{t.popup_title}</h2>
-        <p className="np-text">{t.popup_text}</p>
-        <a
-          href="https://sofia-terapia.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="np-cta"
-          onClick={close}
-        >
-          {t.popup_cta}
-        </a>
+        <div className="np-mockup" aria-hidden="true">
+          <div className="np-desktop-frame">
+            <div className="np-desktop-bar">
+              <div className="np-desktop-dots"><span /><span /><span /></div>
+              <div className="np-desktop-url">sofia-terapia.com</div>
+            </div>
+            <img src="/sofia-desktop.png" alt="" className="np-desktop-img" />
+          </div>
+          <div className="np-mobile-frame">
+            <div className="np-mobile-notch" />
+            <img src="/sofia-mobile.png" alt="" className="np-mobile-img" />
+          </div>
+        </div>
+        <div className="np-body">
+          <div className="np-badge">{t.popup_label}</div>
+          <h2 className="np-title">{t.popup_title}</h2>
+          <p className="np-text">{t.popup_text}</p>
+          <a
+            href="https://sofia-terapia.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="np-cta"
+            onClick={close}
+          >
+            {t.popup_cta}
+          </a>
+        </div>
       </div>
     </div>
   )

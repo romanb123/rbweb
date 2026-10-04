@@ -7,11 +7,24 @@ import CookieBanner from './_components/CookieBanner'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'RBapp — מפתח Full-Stack | Web & App Developer',
-  description:
-    'Full-Stack Developer with 5+ years of experience. Building high-performance websites, mobile apps & SEO-optimized solutions. מפתח אתרים ואפליקציות מובייל.',
+  title: 'RBapp — מפתח Full-Stack | פיתוח אתרים ואפליקציות',
+  description: 'מפתח Full-Stack עם 5+ שנות ניסיון. בניית אתרים, אפליקציות מובייל ופתרונות SEO. Web & App Developer — Next.js, React, WordPress.',
   keywords: ['web developer', 'app developer', 'full-stack', 'React', 'Next.js', 'WordPress', 'Israel', 'מפתח אתרים'],
   icons: { icon: '/favicon.svg' },
+  openGraph: {
+    title: 'RBapp — מפתח Full-Stack | פיתוח אתרים ואפליקציות',
+    description: 'מפתח Full-Stack עם 5+ שנות ניסיון. בניית אתרים, אפליקציות מובייל ופתרונות SEO.',
+    url: 'https://www.rb-app.com',
+    siteName: 'RBapp',
+    images: [{ url: 'https://www.rb-app.com/og-image.png', width: 1200, height: 630, alt: 'RBapp — פיתוח אתרים ואפליקציות' }],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'RBapp — מפתח Full-Stack | פיתוח אתרים ואפליקציות',
+    description: 'מפתח Full-Stack עם 5+ שנות ניסיון. בניית אתרים, אפליקציות מובייל ופתרונות SEO.',
+    images: ['https://www.rb-app.com/og-image.png'],
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

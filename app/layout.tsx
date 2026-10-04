@@ -51,7 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'G-4RD1EM3RS7');
-          gtag('config', 'AW-16917889561');
+          gtag('config', 'AW-16917889561', { url_passthrough: true, ads_data_redaction: false });
         `}</Script>
       </head>
       <body>

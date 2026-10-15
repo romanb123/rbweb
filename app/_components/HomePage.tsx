@@ -153,9 +153,13 @@ const T = {
       maslul_title: 'Maslul Nadir — RareRote Travel',
       maslul_desc: 'A full travel agency website for unique, off-the-beaten-path routes. Hotels, flights, packages, personal guides — all from the first consultation to returning home.',
       maslul_link: 'Visit website ↗',
+      sahara_type: 'WooCommerce · Beauty & Care · Hebrew',
+      sahara_title: 'SAHARA — Brows, Hair & Care',
+      sahara_desc: 'A full e-commerce store for a premium beauty brand. Brow growth serums, waxes, and tweezers — clean aesthetic, mobile-first design, and a smooth shopping experience.',
+      sahara_link: 'Visit website ↗',
       popup_label: '🎉 New Project',
       popup_title: 'Just Launched!',
-      popup_text: 'A brand-new website for Sofia Besiakov — emotional therapist & coach. Minimalist, warm, and built to connect.',
+      popup_text: 'A brand-new e-commerce store for SAHARA — premium brow, hair & care products. Clean design, smooth shopping experience.',
       popup_cta: 'View Project ↗',
       popup_close: 'Close',
       app_type: 'Mobile App · Android · Google Play',
@@ -278,9 +282,13 @@ const T = {
       maslul_title: 'מסלול נדיר — RareRote',
       maslul_desc: 'אתר מלא לסוכנות נסיעות המתמחה במסלולים נדירים ובלתי שגרתיים. טיסות, מלונות, חבילות וליווי אישי — מהרעיון הראשון ועד חזרה הביתה.',
       maslul_link: 'כניסה לאתר ↗',
+      sahara_type: 'WooCommerce · יופי וטיפוח · עברית',
+      sahara_title: 'SAHARA — גבות, שיער וטיפוח',
+      sahara_desc: 'חנות אי-קומרס מלאה למותג יופי פרמיום. רולרים לצמיחת גבות, ווקסים לפיסול ופינצטות מקצועיות — עיצוב נקי, ממוקד מובייל וחוויית קנייה חלקה.',
+      sahara_link: 'כניסה לאתר ↗',
       popup_label: '🎉 פרויקט חדש',
       popup_title: 'השקנו פרויקט חדש!',
-      popup_text: 'אתר חדש לסופיה בסיאקוב — מטפלת רגשית ומאמנת. מינימליסטי, חם ובנוי לחבר בין אנשים.',
+      popup_text: 'חנות אי-קומרס חדשה ל-SAHARA — מוצרי גבות, שיער וטיפוח פרמיום. עיצוב נקי וחוויית קנייה חלקה.',
       popup_cta: 'לצפייה בפרויקט ↗',
       popup_close: 'סגירה',
       app_type: 'אפליקציית מובייל · Android · Google Play',
@@ -402,9 +410,13 @@ const T = {
       maslul_title: 'Maslul Nadir — RareRote',
       maslul_desc: 'Полноценный сайт для туристического агентства, специализирующегося на редких и нестандартных маршрутах. Перелёты, отели, пакеты и личное сопровождение — от первой встречи до возвращения домой.',
       maslul_link: 'Перейти на сайт ↗',
+      sahara_type: 'WooCommerce · Красота и уход · Иврит',
+      sahara_title: 'SAHARA — Брови, волосы и уход',
+      sahara_desc: 'Полноценный интернет-магазин для премиум бьюти-бренда. Роллеры для роста бровей, воск для придания формы и пинцеты — чистый дизайн, mobile-first и удобный шопинг.',
+      sahara_link: 'Перейти на сайт ↗',
       popup_label: '🎉 Новый проект',
       popup_title: 'Только что запустили!',
-      popup_text: 'Новый сайт для Софии Бесяков — эмоционального терапевта и коуча. Минималистичный, тёплый и созданный для настоящего контакта.',
+      popup_text: 'Новый интернет-магазин SAHARA — премиум товары для бровей, волос и ухода. Чистый дизайн и удобный шопинг.',
       popup_cta: 'Смотреть проект ↗',
       popup_close: 'Закрыть',
       app_type: 'Мобильное приложение · Android · Google Play',
@@ -520,9 +532,13 @@ const T = {
       maslul_title: 'Maslul Nadir — RareRote',
       maslul_desc: 'เว็บไซต์ครบวงจรสำหรับบริษัทท่องเที่ยวที่เชี่ยวชาญเส้นทางหายากและแปลกใหม่ ตั๋วเครื่องบิน โรงแรม แพ็กเกจ และไกด์ส่วนตัว — ตั้งแต่การนัดหมายครั้งแรกจนถึงกลับบ้าน',
       maslul_link: 'เยี่ยมชมเว็บไซต์ ↗',
+      sahara_type: 'WooCommerce · ความงามและการดูแล · ฮีบรู',
+      sahara_title: 'SAHARA — คิ้ว ผม และการดูแล',
+      sahara_desc: 'ร้านค้าออนไลน์ครบวงจรสำหรับแบรนด์ความงามพรีเมียม โรลเลอร์เร่งการเจริญเติบโตของคิ้ว แว็กซ์ และแหนบ — ดีไซน์สะอาด mobile-first และประสบการณ์ช้อปปิ้งที่ลื่นไหล',
+      sahara_link: 'เยี่ยมชมเว็บไซต์ ↗',
       popup_label: '🎉 โปรเจกต์ใหม่',
       popup_title: 'เพิ่งเปิดตัว!',
-      popup_text: 'เว็บไซต์ใหม่ของโซเฟีย เบสยาคอฟ — นักบำบัดอารมณ์และโค้ช เรียบง่าย อบอุ่น และออกแบบมาเพื่อสร้างความเชื่อมต่อที่แท้จริง',
+      popup_text: 'ร้านค้าออนไลน์ใหม่ของ SAHARA — สินค้าพรีเมียมสำหรับคิ้ว ผม และการดูแล ดีไซน์สะอาดและประสบการณ์ช้อปปิ้งที่ลื่นไหล',
       popup_cta: 'ดูโปรเจกต์ ↗',
       popup_close: 'ปิด',
       app_type: 'แอปมือถือ · Android · Google Play',
@@ -823,6 +839,35 @@ function Projects({ lang }: { lang: Lang }) {
                 className="project-link"
               >
                 {t.sofia_link}
+              </a>
+            </div>
+          </article>
+
+          <article className="project-card project-card--web project-card--sahara reveal">
+            <div className="project-sofia-mockup" aria-hidden="true">
+              <div className="sofia-desktop-frame">
+                <div className="sofia-browser-bar">
+                  <div className="sofia-browser-dots"><span /><span /><span /></div>
+                  <div className="sofia-browser-url">sahara-il.co.il</div>
+                </div>
+                <img src="/sahara-desktop.png" alt="SAHARA desktop" className="sofia-desktop-img" loading="lazy" />
+              </div>
+              <div className="sofia-mobile-frame">
+                <div className="sofia-mobile-notch" />
+                <img src="/sahara-mobile.png" alt="SAHARA mobile" className="sofia-mobile-img" loading="lazy" />
+              </div>
+            </div>
+            <div className="project-info project-info--web">
+              <span className="project-type">{t.sahara_type}</span>
+              <h3 className="project-title">{t.sahara_title}</h3>
+              <p className="project-desc">{t.sahara_desc}</p>
+              <a
+                href="https://sahara-il.co.il"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                {t.sahara_link}
               </a>
             </div>
           </article>
@@ -1177,7 +1222,7 @@ function NewProjectPopup({ lang }: { lang: Lang }) {
 
   useEffect(() => {
     try {
-      if (localStorage.getItem('sofia_popup_dismissed')) { setDismissed(true); return }
+      if (localStorage.getItem('sahara_popup_dismissed')) { setDismissed(true); return }
     } catch {}
     const timer = setTimeout(() => setVisible(true), 2500)
     return () => clearTimeout(timer)
@@ -1185,7 +1230,7 @@ function NewProjectPopup({ lang }: { lang: Lang }) {
 
   const close = () => {
     setVisible(false)
-    try { localStorage.setItem('sofia_popup_dismissed', '1') } catch {}
+    try { localStorage.setItem('sahara_popup_dismissed', '1') } catch {}
   }
 
   if (dismissed || !visible) return null
@@ -1198,13 +1243,13 @@ function NewProjectPopup({ lang }: { lang: Lang }) {
           <div className="np-desktop-frame">
             <div className="np-desktop-bar">
               <div className="np-desktop-dots"><span /><span /><span /></div>
-              <div className="np-desktop-url">sofia-terapia.com</div>
+              <div className="np-desktop-url">sahara-il.co.il</div>
             </div>
-            <img src="/sofia-desktop.png" alt="" className="np-desktop-img" />
+            <img src="/sahara-desktop.png" alt="" className="np-desktop-img" />
           </div>
           <div className="np-mobile-frame">
             <div className="np-mobile-notch" />
-            <img src="/sofia-mobile-v2.png" alt="" className="np-mobile-img" />
+            <img src="/sahara-mobile.png" alt="" className="np-mobile-img" />
           </div>
         </div>
         <div className="np-body">
@@ -1212,7 +1257,7 @@ function NewProjectPopup({ lang }: { lang: Lang }) {
           <h2 className="np-title">{t.popup_title}</h2>
           <p className="np-text">{t.popup_text}</p>
           <a
-            href="https://sofia-terapia.com"
+            href="https://sahara-il.co.il"
             target="_blank"
             rel="noopener noreferrer"
             className="np-cta"

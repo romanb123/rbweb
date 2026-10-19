@@ -145,6 +145,10 @@ const T = {
     projects: {
       label: 'Featured Work',
       title: 'Projects',
+      knockout_type: 'Website · WordPress · Muay Thai Gym',
+      knockout_title: 'Knockout GYM — Muay Thai Rishon LeZion',
+      knockout_desc: 'A powerful website for the #1 Muay Thai gym in Rishon LeZion. Classes for kids, teens, and adults — bold dark design with red accents, trial session CTA, and a full schedule.',
+      knockout_link: 'Visit website ↗',
       sofia_type: 'Website · Next.js · Therapy & Coaching',
       sofia_title: 'Sofia Besiakov — Emotional Therapist',
       sofia_desc: 'A bilingual (Russian & Hebrew) website for an emotional therapist and coach. Soft elegant design, booking flow, and a deep personal story — built to convert visitors into clients.',
@@ -159,7 +163,7 @@ const T = {
       sahara_link: 'Visit website ↗',
       popup_label: '🎉 New Project',
       popup_title: 'Just Launched!',
-      popup_text: 'A brand-new e-commerce store for SAHARA — premium brow, hair & care products. Clean design, smooth shopping experience.',
+      popup_text: 'A new website for Knockout GYM — the #1 Muay Thai gym in Rishon LeZion. Bold design, trial session booking, and full class schedule.',
       popup_cta: 'View Project ↗',
       popup_close: 'Close',
       app_type: 'Mobile App · Android · Google Play',
@@ -274,6 +278,10 @@ const T = {
     projects: {
       label: 'עבודות נבחרות',
       title: 'פרויקטים',
+      knockout_type: 'אתר אינטרנט · WordPress · מועדון אגרוף תאילנדי',
+      knockout_title: 'Knockout GYM — איגרוף תאילנדי ראשון לציון',
+      knockout_desc: 'אתר עוצמתי למועדון האיגרוף התאילנדי הראשון בראשון לציון. קבוצות ילדים, נוער ובוגרים — עיצוב כהה ועוצמתי עם אדום, CTA לאימון ניסיון ולוח שיעורים מלא.',
+      knockout_link: 'כניסה לאתר ↗',
       sofia_type: 'אתר אינטרנט · Next.js · טיפול רגשי',
       sofia_title: 'סופיה בסיאקוב — מטפלת רגשית',
       sofia_desc: 'אתר דו-לשוני (רוסית ועברית) למטפלת רגשית ומאמנת. עיצוב אלגנטי ועדין, תהליך הרשמה לפגישות, וסיפור אישי עמוק — כדי להפוך מבקרים ללקוחות.',
@@ -288,7 +296,7 @@ const T = {
       sahara_link: 'כניסה לאתר ↗',
       popup_label: '🎉 פרויקט חדש',
       popup_title: 'השקנו פרויקט חדש!',
-      popup_text: 'חנות אי-קומרס חדשה ל-SAHARA — מוצרי גבות, שיער וטיפוח פרמיום. עיצוב נקי וחוויית קנייה חלקה.',
+      popup_text: 'אתר חדש ל-Knockout GYM — מועדון האיגרוף התאילנדי הראשון בראשון לציון. עיצוב עוצמתי, הרשמה לאימון ניסיון ולוח שיעורים מלא.',
       popup_cta: 'לצפייה בפרויקט ↗',
       popup_close: 'סגירה',
       app_type: 'אפליקציית מובייל · Android · Google Play',
@@ -402,6 +410,10 @@ const T = {
     projects: {
       label: 'Избранные работы',
       title: 'Проекты',
+      knockout_type: 'Сайт · WordPress · Зал муай-тай',
+      knockout_title: 'Knockout GYM — Муай-тай Ришон ле-Цион',
+      knockout_desc: 'Мощный сайт для зала муай-тай №1 в Ришон ле-Ционе. Группы для детей, подростков и взрослых — тёмный дизайн с красными акцентами, CTA для пробного занятия и расписание.',
+      knockout_link: 'Перейти на сайт ↗',
       sofia_type: 'Сайт · Next.js · Психология и коучинг',
       sofia_title: 'София Бесяков — эмоциональный терапевт',
       sofia_desc: 'Двуязычный сайт (русский и иврит) для эмоционального терапевта и коуча. Элегантный мягкий дизайн, запись на сессии и глубокая личная история — создан для превращения посетителей в клиентов.',
@@ -416,7 +428,7 @@ const T = {
       sahara_link: 'Перейти на сайт ↗',
       popup_label: '🎉 Новый проект',
       popup_title: 'Только что запустили!',
-      popup_text: 'Новый интернет-магазин SAHARA — премиум товары для бровей, волос и ухода. Чистый дизайн и удобный шопинг.',
+      popup_text: 'Новый сайт для Knockout GYM — лучший зал муай-тай в Ришон ле-Ционе. Мощный дизайн, запись на пробное занятие и расписание.',
       popup_cta: 'Смотреть проект ↗',
       popup_close: 'Закрыть',
       app_type: 'Мобильное приложение · Android · Google Play',
@@ -524,6 +536,10 @@ const T = {
     projects: {
       label: 'ผลงานเด่น',
       title: 'ผลงาน',
+      knockout_type: 'เว็บไซต์ · WordPress · ยิมมวยไทย',
+      knockout_title: 'Knockout GYM — มวยไทย ริชอน เลซิออน',
+      knockout_desc: 'เว็บไซต์ทรงพลังสำหรับยิมมวยไทยอันดับ 1 ในริชอน เลซิออน คลาสสำหรับเด็ก วัยรุ่น และผู้ใหญ่ — ดีไซน์มืดเข้มกับสีแดง CTA ทดลองเรียนฟรี และตารางเรียนครบ',
+      knockout_link: 'เยี่ยมชมเว็บไซต์ ↗',
       sofia_type: 'เว็บไซต์ · Next.js · การบำบัดและโค้ชชิ่ง',
       sofia_title: 'โซเฟีย เบสยาคอฟ — นักบำบัดอารมณ์',
       sofia_desc: 'เว็บไซต์สองภาษา (รัสเซีย-ฮีบรู) สำหรับนักบำบัดอารมณ์และโค้ช ดีไซน์สวยงามอ่อนหวาน ระบบจองนัดหมาย และเรื่องราวส่วนตัวที่ลึกซึ้ง — สร้างเพื่อเปลี่ยนผู้เยี่ยมชมให้เป็นลูกค้า',
@@ -538,7 +554,7 @@ const T = {
       sahara_link: 'เยี่ยมชมเว็บไซต์ ↗',
       popup_label: '🎉 โปรเจกต์ใหม่',
       popup_title: 'เพิ่งเปิดตัว!',
-      popup_text: 'ร้านค้าออนไลน์ใหม่ของ SAHARA — สินค้าพรีเมียมสำหรับคิ้ว ผม และการดูแล ดีไซน์สะอาดและประสบการณ์ช้อปปิ้งที่ลื่นไหล',
+      popup_text: 'เว็บไซต์ใหม่ของ Knockout GYM — ยิมมวยไทยอันดับ 1 ในริชอน เลซิออน ดีไซน์ทรงพลัง จองทดลองเรียน และตารางเรียนครบ',
       popup_cta: 'ดูโปรเจกต์ ↗',
       popup_close: 'ปิด',
       app_type: 'แอปมือถือ · Android · Google Play',
@@ -814,6 +830,35 @@ function Projects({ lang }: { lang: Lang }) {
           <h2 className="section-title">{t.title}</h2>
         </div>
         <div className="projects-grid reveal reveal-delay-1">
+          <article className="project-card project-card--web project-card--knockout reveal">
+            <div className="project-sofia-mockup" aria-hidden="true">
+              <div className="sofia-desktop-frame">
+                <div className="sofia-browser-bar">
+                  <div className="sofia-browser-dots"><span /><span /><span /></div>
+                  <div className="sofia-browser-url">knockoutgym.co.il</div>
+                </div>
+                <img src="/knockout-desktop.png" alt="Knockout GYM desktop" className="sofia-desktop-img" loading="lazy" />
+              </div>
+              <div className="sofia-mobile-frame">
+                <div className="sofia-mobile-notch" />
+                <img src="/knockout-mobile.png" alt="Knockout GYM mobile" className="sofia-mobile-img" loading="lazy" />
+              </div>
+            </div>
+            <div className="project-info project-info--web">
+              <span className="project-type">{t.knockout_type}</span>
+              <h3 className="project-title">{t.knockout_title}</h3>
+              <p className="project-desc">{t.knockout_desc}</p>
+              <a
+                href="https://knockoutgym.co.il"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                {t.knockout_link}
+              </a>
+            </div>
+          </article>
+
           <article className="project-card project-card--web project-card--sofia reveal">
             <div className="project-sofia-mockup" aria-hidden="true">
               <div className="sofia-desktop-frame">
@@ -1222,7 +1267,7 @@ function NewProjectPopup({ lang }: { lang: Lang }) {
 
   useEffect(() => {
     try {
-      if (localStorage.getItem('sahara_popup_dismissed')) { setDismissed(true); return }
+      if (localStorage.getItem('knockout_popup_dismissed')) { setDismissed(true); return }
     } catch {}
     const timer = setTimeout(() => setVisible(true), 2500)
     return () => clearTimeout(timer)
@@ -1230,7 +1275,7 @@ function NewProjectPopup({ lang }: { lang: Lang }) {
 
   const close = () => {
     setVisible(false)
-    try { localStorage.setItem('sahara_popup_dismissed', '1') } catch {}
+    try { localStorage.setItem('knockout_popup_dismissed', '1') } catch {}
   }
 
   if (dismissed || !visible) return null
@@ -1243,13 +1288,13 @@ function NewProjectPopup({ lang }: { lang: Lang }) {
           <div className="np-desktop-frame">
             <div className="np-desktop-bar">
               <div className="np-desktop-dots"><span /><span /><span /></div>
-              <div className="np-desktop-url">sahara-il.co.il</div>
+              <div className="np-desktop-url">knockoutgym.co.il</div>
             </div>
-            <img src="/sahara-desktop.png" alt="" className="np-desktop-img" />
+            <img src="/knockout-desktop.png" alt="" className="np-desktop-img" />
           </div>
           <div className="np-mobile-frame">
             <div className="np-mobile-notch" />
-            <img src="/sahara-mobile.png" alt="" className="np-mobile-img" />
+            <img src="/knockout-mobile.png" alt="" className="np-mobile-img" />
           </div>
         </div>
         <div className="np-body">
@@ -1257,7 +1302,7 @@ function NewProjectPopup({ lang }: { lang: Lang }) {
           <h2 className="np-title">{t.popup_title}</h2>
           <p className="np-text">{t.popup_text}</p>
           <a
-            href="https://sahara-il.co.il"
+            href="https://knockoutgym.co.il"
             target="_blank"
             rel="noopener noreferrer"
             className="np-cta"

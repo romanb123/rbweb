@@ -145,7 +145,7 @@ const T = {
     projects: {
       label: 'Featured Work',
       title: 'Projects',
-      knockout_type: 'Website · WordPress · Muay Thai Gym',
+      knockout_type: 'Website · Next.js · Muay Thai Gym',
       knockout_title: 'Knockout GYM — Muay Thai Rishon LeZion',
       knockout_desc: 'A powerful website for the #1 Muay Thai gym in Rishon LeZion. Classes for kids, teens, and adults — bold dark design with red accents, trial session CTA, and a full schedule.',
       knockout_link: 'Visit website ↗',
@@ -278,7 +278,7 @@ const T = {
     projects: {
       label: 'עבודות נבחרות',
       title: 'פרויקטים',
-      knockout_type: 'אתר אינטרנט · WordPress · מועדון אגרוף תאילנדי',
+      knockout_type: 'אתר אינטרנט · Next.js · מועדון אגרוף תאילנדי',
       knockout_title: 'Knockout GYM — איגרוף תאילנדי ראשון לציון',
       knockout_desc: 'אתר עוצמתי למועדון האיגרוף התאילנדי הראשון בראשון לציון. קבוצות ילדים, נוער ובוגרים — עיצוב כהה ועוצמתי עם אדום, CTA לאימון ניסיון ולוח שיעורים מלא.',
       knockout_link: 'כניסה לאתר ↗',
@@ -410,7 +410,7 @@ const T = {
     projects: {
       label: 'Избранные работы',
       title: 'Проекты',
-      knockout_type: 'Сайт · WordPress · Зал муай-тай',
+      knockout_type: 'Сайт · Next.js · Зал муай-тай',
       knockout_title: 'Knockout GYM — Муай-тай Ришон ле-Цион',
       knockout_desc: 'Мощный сайт для зала муай-тай №1 в Ришон ле-Ционе. Группы для детей, подростков и взрослых — тёмный дизайн с красными акцентами, CTA для пробного занятия и расписание.',
       knockout_link: 'Перейти на сайт ↗',
@@ -536,7 +536,7 @@ const T = {
     projects: {
       label: 'ผลงานเด่น',
       title: 'ผลงาน',
-      knockout_type: 'เว็บไซต์ · WordPress · ยิมมวยไทย',
+      knockout_type: 'เว็บไซต์ · Next.js · ยิมมวยไทย',
       knockout_title: 'Knockout GYM — มวยไทย ริชอน เลซิออน',
       knockout_desc: 'เว็บไซต์ทรงพลังสำหรับยิมมวยไทยอันดับ 1 ในริชอน เลซิออน คลาสสำหรับเด็ก วัยรุ่น และผู้ใหญ่ — ดีไซน์มืดเข้มกับสีแดง CTA ทดลองเรียนฟรี และตารางเรียนครบ',
       knockout_link: 'เยี่ยมชมเว็บไซต์ ↗',

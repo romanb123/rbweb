@@ -860,11 +860,11 @@ function Projects({ lang }: { lang: Lang }) {
                   <div className="sofia-browser-dots"><span /><span /><span /></div>
                   <div className="sofia-browser-url">knockoutgym.co.il</div>
                 </div>
-                <img src="/knockout-desktop.png" alt="Knockout GYM desktop" className="sofia-desktop-img" loading="lazy" />
+                <img src="/knockout-desktop.png" alt="אתר Knockout GYM — מועדון איגרוף תאילנדי ראשון לציון, בניית אתר Next.js, תצוגת דסקטופ" className="sofia-desktop-img" loading="lazy" />
               </div>
               <div className="sofia-mobile-frame">
                 <div className="sofia-mobile-notch" />
-                <img src="/knockout-mobile.png" alt="Knockout GYM mobile" className="sofia-mobile-img" loading="lazy" />
+                <img src="/knockout-mobile.png" alt="אתר Knockout GYM — תצוגת מובייל" className="sofia-mobile-img" loading="lazy" />
               </div>
             </div>
             <div className="project-info project-info--web">
@@ -889,11 +889,11 @@ function Projects({ lang }: { lang: Lang }) {
                   <div className="sofia-browser-dots"><span /><span /><span /></div>
                   <div className="sofia-browser-url">sofia-terapia.com</div>
                 </div>
-                <img src="/sofia-desktop.png" alt="Sofia Terapia desktop" className="sofia-desktop-img" loading="lazy" />
+                <img src="/sofia-desktop.png" alt="אתר Sofia Terapia — פסיכותרפיה וטיפול רגשי, בניית אתר WordPress, תצוגת דסקטופ" className="sofia-desktop-img" loading="lazy" />
               </div>
               <div className="sofia-mobile-frame">
                 <div className="sofia-mobile-notch" />
-                <img src="/sofia-mobile-v2.png" alt="Sofia Terapia mobile" className="sofia-mobile-img" loading="lazy" />
+                <img src="/sofia-mobile-v2.png" alt="אתר Sofia Terapia — תצוגת מובייל" className="sofia-mobile-img" loading="lazy" />
               </div>
             </div>
             <div className="project-info project-info--web">
@@ -918,11 +918,11 @@ function Projects({ lang }: { lang: Lang }) {
                   <div className="sofia-browser-dots"><span /><span /><span /></div>
                   <div className="sofia-browser-url">sahara-il.co.il</div>
                 </div>
-                <img src="/sahara-desktop.png" alt="SAHARA desktop" className="sofia-desktop-img" loading="lazy" />
+                <img src="/sahara-desktop.png" alt="חנות SAHARA — גבות שיער וטיפוח, חנות WooCommerce, תצוגת דסקטופ" className="sofia-desktop-img" loading="lazy" />
               </div>
               <div className="sofia-mobile-frame">
                 <div className="sofia-mobile-notch" />
-                <img src="/sahara-mobile.png" alt="SAHARA mobile" className="sofia-mobile-img" loading="lazy" />
+                <img src="/sahara-mobile.png" alt="חנות SAHARA — תצוגת מובייל" className="sofia-mobile-img" loading="lazy" />
               </div>
             </div>
             <div className="project-info project-info--web">
@@ -947,11 +947,11 @@ function Projects({ lang }: { lang: Lang }) {
                   <div className="sofia-browser-dots"><span /><span /><span /></div>
                   <div className="sofia-browser-url">maslul-nadir.co.il</div>
                 </div>
-                <img src="/maslul-desktop.png" alt="Maslul Nadir desktop" className="sofia-desktop-img" loading="lazy" />
+                <img src="/maslul-desktop.png" alt="אתר מסלול נדיר — ספורט הרפתקאות וטיולים, תצוגת דסקטופ" className="sofia-desktop-img" loading="lazy" />
               </div>
               <div className="sofia-mobile-frame">
                 <div className="sofia-mobile-notch" />
-                <img src="/maslul-mobile.png" alt="Maslul Nadir mobile" className="sofia-mobile-img" loading="lazy" />
+                <img src="/maslul-mobile.png" alt="אתר מסלול נדיר — תצוגת מובייל" className="sofia-mobile-img" loading="lazy" />
               </div>
             </div>
             <div className="project-info project-info--web">

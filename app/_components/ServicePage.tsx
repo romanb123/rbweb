@@ -3,6 +3,44 @@
 import { useState, useEffect, useRef } from 'react'
 import { SERVICES, type Lang, type ServiceSlug } from '../_data/services'
 
+const NAV_LABELS: Record<Lang, { services: string; projects: string; about: string; contact: string }> = {
+  he: { services: 'שירותים', projects: 'פרויקטים', about: 'אודות', contact: 'צור קשר ↗' },
+  en: { services: 'Services', projects: 'Projects', about: 'About', contact: 'Contact ↗' },
+  ru: { services: 'Услуги', projects: 'Проекты', about: 'О нас', contact: 'Связаться ↗' },
+  th: { services: 'บริการ', projects: 'ผลงาน', about: 'เกี่ยวกับ', contact: 'ติดต่อ ↗' },
+}
+
+const SERVICE_NAV_ITEMS: Record<Lang, { slug: string; num: string; title: string }[]> = {
+  he: [
+    { slug: 'websites', num: '01', title: 'בניית אתרים' },
+    { slug: 'apps', num: '02', title: 'בניית אפליקציות' },
+    { slug: 'seo', num: '03', title: 'SEO וביצועים' },
+    { slug: 'google-ads', num: '04', title: 'קמפיינים ממומנים' },
+    { slug: 'ai-agents', num: '05', title: 'סוכני AI' },
+  ],
+  en: [
+    { slug: 'websites', num: '01', title: 'Web Development' },
+    { slug: 'apps', num: '02', title: 'App Development' },
+    { slug: 'seo', num: '03', title: 'SEO & Performance' },
+    { slug: 'google-ads', num: '04', title: 'Google Ads' },
+    { slug: 'ai-agents', num: '05', title: 'AI Agents' },
+  ],
+  ru: [
+    { slug: 'websites', num: '01', title: 'Создание сайтов' },
+    { slug: 'apps', num: '02', title: 'Разработка приложений' },
+    { slug: 'seo', num: '03', title: 'SEO и производительность' },
+    { slug: 'google-ads', num: '04', title: 'Google Ads' },
+    { slug: 'ai-agents', num: '05', title: 'AI агенты' },
+  ],
+  th: [
+    { slug: 'websites', num: '01', title: 'สร้างเว็บไซต์' },
+    { slug: 'apps', num: '02', title: 'พัฒนาแอป' },
+    { slug: 'seo', num: '03', title: 'SEO & ประสิทธิภาพ' },
+    { slug: 'google-ads', num: '04', title: 'Google Ads' },
+    { slug: 'ai-agents', num: '05', title: 'AI Agents' },
+  ],
+}
+
 const CTA_LABEL: Record<Lang, string> = {
   he: 'צור קשר',
   en: 'Contact',
@@ -95,7 +133,15 @@ function RevealSection({ children, style }: { children: React.ReactNode; style?:
 export default function ServicePage({ lang, slug }: { lang: Lang; slug: ServiceSlug }) {
   const service = SERVICES.find(s => s.slug === slug)
   const [openFaq, setOpenFaq] = useState<number | null>(null)
+  const [servicesOpen, setServicesOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const isRTL = lang === 'he'
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   if (!service) return null
   const data = service.langs[lang]
@@ -458,10 +504,42 @@ export default function ServicePage({ lang, slug }: { lang: Lang; slug: ServiceS
   return (
     <div style={styles.page}>
       {/* NAV */}
-      <nav style={styles.nav}>
-        <a href={`/${lang}`} style={styles.navBrand}>RBapp</a>
-        <span style={styles.navTitle}>{data.title}</span>
-        <a href={`/${lang}#contact`} style={styles.navCta}>{CTA_LABEL[lang]}</a>
+      <nav className={`nav${scrolled ? ' nav--scrolled' : ''}`}>
+        <div className="nav-inner">
+          <a href={`/${lang}`} className="nav-brand">
+            <div className="logo-mark" style={{ width: 38, height: 38 }}><span>RB</span></div>
+            <span className="nav-brand-text">RBapp</span>
+          </a>
+          <div className="nav-links">
+            <div
+              className="nav-dropdown-wrap"
+              onMouseEnter={() => setServicesOpen(true)}
+              onMouseLeave={() => setServicesOpen(false)}
+            >
+              <a href={`/${lang}#services`} className="nav-dropdown-trigger">
+                {NAV_LABELS[lang].services} <span className="nav-caret" aria-hidden="true">▾</span>
+              </a>
+              {servicesOpen && (
+                <div className="nav-dropdown">
+                  {SERVICE_NAV_ITEMS[lang].map(s => (
+                    <a
+                      key={s.slug}
+                      href={`/${lang}/services/${s.slug}`}
+                      className="nav-dropdown-item"
+                    >
+                      <span className="nav-dropdown-num">{s.num}</span>
+                      {s.title}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+            <a href={`/${lang}#projects`}>{NAV_LABELS[lang].projects}</a>
+            <a href={`/${lang}#about`}>{NAV_LABELS[lang].about}</a>
+            {lang === 'he' && <a href="/he/blog">בלוג</a>}
+            <a href={`/${lang}#contact`} className="nav-cta">{NAV_LABELS[lang].contact}</a>
+          </div>
+        </div>
       </nav>
 
       {/* HERO */}

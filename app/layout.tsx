@@ -7,13 +7,13 @@ import CookieBanner from './_components/CookieBanner'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'RBapp — מפתח Full-Stack | בניית אתרים, אפליקציות ופתרונות AI',
-  description: 'בניית אתרים מהירים, אפליקציות מובייל, פתרונות AI ואוטומציות לעסקים. מפתח Full-Stack עם 5+ שנות ניסיון — Next.js, React, React Native, WordPress.',
-  keywords: ['בניית אתרים', 'פיתוח אפליקציות', 'פתרונות AI', 'אוטומציות', 'מפתח אתרים', 'web developer', 'app developer', 'full-stack', 'React', 'Next.js', 'WordPress', 'Israel', 'AI solutions'],
+  title: 'RBapp — בניית אתרים, אפליקציות ופתרונות AI לעסקים',
+  description: 'RBapp מספקת פתרונות דיגיטליים מקצה לקצה — אתרים מהירים, אפליקציות מובייל, סוכני AI ואוטומציות חכמות. טכנולוגיה מתקדמת בשירות העסק שלך.',
+  keywords: ['בניית אתרים', 'פיתוח אפליקציות', 'פתרונות AI', 'אוטומציות', 'חברת פיתוח', 'web development', 'app development', 'AI solutions', 'React', 'Next.js', 'WordPress', 'Israel'],
   icons: { icon: '/favicon.svg' },
   openGraph: {
-    title: 'RBapp — מפתח Full-Stack | בניית אתרים, אפליקציות ופתרונות AI',
-    description: 'בניית אתרים מהירים, אפליקציות מובייל, פתרונות AI ואוטומציות לעסקים. מפתח Full-Stack עם 5+ שנות ניסיון.',
+    title: 'RBapp — בניית אתרים, אפליקציות ופתרונות AI לעסקים',
+    description: 'RBapp מספקת פתרונות דיגיטליים מקצה לקצה — אתרים מהירים, אפליקציות מובייל, סוכני AI ואוטומציות חכמות.',
     url: 'https://www.rb-app.com',
     siteName: 'RBapp',
     images: [{ url: 'https://www.rb-app.com/og-image.png', width: 1200, height: 630, alt: 'RBapp — בניית אתרים, אפליקציות ופתרונות AI' }],
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'RBapp — מפתח Full-Stack | בניית אתרים, אפליקציות ופתרונות AI',
-    description: 'בניית אתרים מהירים, אפליקציות מובייל, פתרונות AI ואוטומציות לעסקים. מפתח Full-Stack עם 5+ שנות ניסיון.',
+    title: 'RBapp — בניית אתרים, אפליקציות ופתרונות AI לעסקים',
+    description: 'RBapp מספקת פתרונות דיגיטליים מקצה לקצה — אתרים מהירים, אפליקציות מובייל, סוכני AI ואוטומציות חכמות.',
     images: ['https://www.rb-app.com/og-image.png'],
   },
 }

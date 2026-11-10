@@ -783,6 +783,21 @@ function Hero({ lang }: { lang: Lang }) {
 }
 
 // ─── Services ─────────────────────────────────────────────────────────────────
+const SERVICE_SLUG_MAP: Record<string, string> = {
+  '01': 'web-development',
+  '02': 'app-development',
+  '03': 'seo',
+  '04': 'google-ads',
+  '05': 'ai-agents',
+}
+
+const LEARN_MORE_LABEL: Record<Lang, string> = {
+  he: 'פרטים נוספים ←',
+  en: 'Learn more →',
+  ru: 'Подробнее →',
+  th: 'เรียนรู้เพิ่มเติม →',
+}
+
 function Services({ lang }: { lang: Lang }) {
   const t = T[lang].services
   return (
@@ -794,7 +809,12 @@ function Services({ lang }: { lang: Lang }) {
         </div>
         <div className="services-grid">
           {t.items.map((s, i) => (
-            <div key={s.num} className={`service-card reveal reveal-delay-${i + 1}`}>
+            <a
+              key={s.num}
+              href={`/${lang}/services/${SERVICE_SLUG_MAP[s.num]}`}
+              className={`service-card reveal reveal-delay-${i + 1}`}
+              style={{ textDecoration: 'none', display: 'block', cursor: 'pointer' }}
+            >
               <span className="service-num">{s.num}</span>
               <h3 className="service-title">{s.title}</h3>
               <p className="service-desc">{s.desc}</p>
@@ -803,7 +823,10 @@ function Services({ lang }: { lang: Lang }) {
                   <span key={tag} className="tag">{tag}</span>
                 ))}
               </div>
-            </div>
+              <div style={{ marginTop: '1rem', color: '#c8ff00', fontSize: '0.82rem', fontFamily: "'IBM Plex Mono', monospace", letterSpacing: '0.05em' }}>
+                {LEARN_MORE_LABEL[lang]}
+              </div>
+            </a>
           ))}
         </div>
       </div>

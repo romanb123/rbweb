@@ -21,59 +21,60 @@ export default function SiteNav({ basePath = '/he' }: { basePath?: string }) {
   }
 
   return (
-    <nav className="nav nav--scrolled">
-      <div className="nav-inner">
-        <a href={basePath} className="nav-brand">
-          <span className="nav-brand-text">RBapp</span>
-        </a>
+    <>
+      <nav className="nav nav--scrolled">
+        <div className="nav-inner">
+          <a href={basePath} className="nav-brand">
+            <span className="nav-brand-text">RBapp</span>
+          </a>
 
-        {/* Desktop links */}
-        <div className="nav-links">
-          <div
-            className="nav-dropdown-wrap"
-            onMouseEnter={() => setServicesOpen(true)}
-            onMouseLeave={() => setServicesOpen(false)}
-          >
-            <a href={`${basePath}#services`} className="nav-dropdown-trigger">
-              שירותים <span className="nav-caret" aria-hidden="true">▾</span>
-            </a>
-            {servicesOpen && (
-              <div className="nav-dropdown">
-                {SERVICE_ITEMS.map(s => (
-                  <a
-                    key={s.num}
-                    href={`/he/services/${s.slug}`}
-                    className="nav-dropdown-item"
-                  >
-                    <span className="nav-dropdown-num">{s.num}</span>
-                    {s.title}
-                  </a>
-                ))}
-              </div>
-            )}
+          {/* Desktop links */}
+          <div className="nav-links">
+            <div
+              className="nav-dropdown-wrap"
+              onMouseEnter={() => setServicesOpen(true)}
+              onMouseLeave={() => setServicesOpen(false)}
+            >
+              <a href={`${basePath}#services`} className="nav-dropdown-trigger">
+                שירותים <span className="nav-caret" aria-hidden="true">▾</span>
+              </a>
+              {servicesOpen && (
+                <div className="nav-dropdown">
+                  {SERVICE_ITEMS.map(s => (
+                    <a
+                      key={s.num}
+                      href={`/he/services/${s.slug}`}
+                      className="nav-dropdown-item"
+                    >
+                      <span className="nav-dropdown-num">{s.num}</span>
+                      {s.title}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+            <a href={`${basePath}#projects`}>פרויקטים</a>
+            <a href={`${basePath}#about`}>אודות</a>
+            <a href="/he/blog">בלוג</a>
+            <a href={`${basePath}#contact`} className="nav-cta">צור קשר ↗</a>
           </div>
-          <a href={`${basePath}#projects`}>פרויקטים</a>
-          <a href={`${basePath}#about`}>אודות</a>
-          <a href="/he/blog">בלוג</a>
-          <a href={`${basePath}#contact`} className="nav-cta">צור קשר ↗</a>
+
+          {/* Hamburger button */}
+          <button
+            className={`nav-hamburger${menuOpen ? ' open' : ''}`}
+            onClick={() => setMenuOpen(o => !o)}
+            aria-label={menuOpen ? 'סגור תפריט' : 'פתח תפריט'}
+            aria-expanded={menuOpen}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
         </div>
+      </nav>
 
-        {/* Hamburger button */}
-        <button
-          className={`nav-hamburger${menuOpen ? ' open' : ''}`}
-          onClick={() => setMenuOpen(o => !o)}
-          aria-label={menuOpen ? 'סגור תפריט' : 'פתח תפריט'}
-          aria-expanded={menuOpen}
-        >
-          <span />
-          <span />
-          <span />
-        </button>
-      </div>
-
-      {/* Mobile menu */}
+      {/* Mobile menu — outside <nav> to avoid backdrop-filter containing block */}
       <div className={`nav-mobile${menuOpen ? ' open' : ''}`} aria-hidden={!menuOpen}>
-        {/* Services accordion */}
         <div className={`nav-mobile-services${mobileServicesOpen ? ' open' : ''}`}>
           <div
             className="nav-mobile-services-title"
@@ -101,6 +102,6 @@ export default function SiteNav({ basePath = '/he' }: { basePath?: string }) {
         <a href="/he/blog" className="nav-mobile-link" onClick={closeMenu}>בלוג</a>
         <a href={`${basePath}#contact`} className="nav-mobile-link nav-cta-mobile" onClick={closeMenu}>צור קשר ↗</a>
       </div>
-    </nav>
+    </>
   )
 }

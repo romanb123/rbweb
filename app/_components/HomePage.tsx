@@ -721,6 +721,7 @@ function Nav({ lang, onChangeLang }: { lang: Lang; onChangeLang: (l: Lang) => vo
   }
 
   return (
+    <>
     <nav className={`nav ${scrolled ? 'nav--scrolled' : ''}`}>
       <div className="nav-inner">
         <a href="#home" className="nav-brand">
@@ -784,54 +785,55 @@ function Nav({ lang, onChangeLang }: { lang: Lang; onChangeLang: (l: Lang) => vo
           <span />
         </button>
       </div>
-
-      {/* Mobile menu */}
-      <div className={`nav-mobile${menuOpen ? ' open' : ''}`} aria-hidden={!menuOpen}>
-        {/* Services accordion */}
-        <div className={`nav-mobile-services${mobileServicesOpen ? ' open' : ''}`}>
-          <div
-            className="nav-mobile-services-title"
-            onClick={() => setMobileServicesOpen(o => !o)}
-          >
-            {t.services} <span className="nav-caret">▾</span>
-          </div>
-          <div className="nav-mobile-services-list">
-            {serviceItems.map(s => (
-              <a
-                key={s.num}
-                href={`/${lang}/services/${SERVICE_SLUG_MAP[s.num as keyof typeof SERVICE_SLUG_MAP]}`}
-                className="nav-mobile-service-item"
-                onClick={closeMenu}
-              >
-                <span className="nav-dropdown-num">{s.num}</span>
-                {s.title}
-              </a>
-            ))}
-          </div>
-        </div>
-
-        <a href="#projects" className="nav-mobile-link" onClick={closeMenu}>{t.projects}</a>
-        <a href="#about" className="nav-mobile-link" onClick={closeMenu}>{t.about}</a>
-        {lang === 'he' && (
-          <a href="/he/blog" className="nav-mobile-link" onClick={closeMenu}>בלוג</a>
-        )}
-        <div style={{ padding: '16px 0', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
-          <select
-            className="lang-select"
-            value={lang}
-            onChange={(e) => onChangeLang(e.target.value as Lang)}
-            aria-label="Select language"
-            style={{ width: '100%', fontSize: '16px', padding: '10px 0' }}
-          >
-            <option value="he">עברית</option>
-            <option value="en">English</option>
-            <option value="ru">Русский</option>
-            <option value="th">ภาษาไทย</option>
-          </select>
-        </div>
-        <a href="#contact" className="nav-mobile-link nav-cta-mobile" onClick={closeMenu}>{t.contact} ↗</a>
-      </div>
     </nav>
+
+    {/* Mobile menu — outside <nav> to avoid backdrop-filter containing block */}
+    <div className={`nav-mobile${menuOpen ? ' open' : ''}`} aria-hidden={!menuOpen}>
+      {/* Services accordion */}
+      <div className={`nav-mobile-services${mobileServicesOpen ? ' open' : ''}`}>
+        <div
+          className="nav-mobile-services-title"
+          onClick={() => setMobileServicesOpen(o => !o)}
+        >
+          {t.services} <span className="nav-caret">▾</span>
+        </div>
+        <div className="nav-mobile-services-list">
+          {serviceItems.map(s => (
+            <a
+              key={s.num}
+              href={`/${lang}/services/${SERVICE_SLUG_MAP[s.num as keyof typeof SERVICE_SLUG_MAP]}`}
+              className="nav-mobile-service-item"
+              onClick={closeMenu}
+            >
+              <span className="nav-dropdown-num">{s.num}</span>
+              {s.title}
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <a href="#projects" className="nav-mobile-link" onClick={closeMenu}>{t.projects}</a>
+      <a href="#about" className="nav-mobile-link" onClick={closeMenu}>{t.about}</a>
+      {lang === 'he' && (
+        <a href="/he/blog" className="nav-mobile-link" onClick={closeMenu}>בלוג</a>
+      )}
+      <div style={{ padding: '16px 0', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+        <select
+          className="lang-select"
+          value={lang}
+          onChange={(e) => onChangeLang(e.target.value as Lang)}
+          aria-label="Select language"
+          style={{ width: '100%', fontSize: '16px', padding: '10px 0' }}
+        >
+          <option value="he">עברית</option>
+          <option value="en">English</option>
+          <option value="ru">Русский</option>
+          <option value="th">ภาษาไทย</option>
+        </select>
+      </div>
+      <a href="#contact" className="nav-mobile-link nav-cta-mobile" onClick={closeMenu}>{t.contact} ↗</a>
+    </div>
+    </>
   )
 }
 

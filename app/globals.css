@@ -1676,6 +1676,7 @@ html[lang="th"] .hero-line { font-size: clamp(30px, 8vw, 90px); }
   .np-body { padding: 16px 18px 22px; }
   .np-title { font-size: 18px; }
   .np-text { font-size: 13px; margin-bottom: 16px; }
+}
 
 /* ── Blog ───────────────────────────────────────── */
 .blog-nav-back {

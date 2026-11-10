@@ -12,29 +12,29 @@ const NAV_LABELS: Record<Lang, { services: string; projects: string; about: stri
 
 const SERVICE_NAV_ITEMS: Record<Lang, { slug: string; num: string; title: string }[]> = {
   he: [
-    { slug: 'websites', num: '01', title: 'בניית אתרים' },
-    { slug: 'apps', num: '02', title: 'בניית אפליקציות' },
+    { slug: 'web-development', num: '01', title: 'בניית אתרים' },
+    { slug: 'app-development', num: '02', title: 'בניית אפליקציות' },
     { slug: 'seo', num: '03', title: 'SEO וביצועים' },
     { slug: 'google-ads', num: '04', title: 'קמפיינים ממומנים' },
     { slug: 'ai-agents', num: '05', title: 'סוכני AI' },
   ],
   en: [
-    { slug: 'websites', num: '01', title: 'Web Development' },
-    { slug: 'apps', num: '02', title: 'App Development' },
+    { slug: 'web-development', num: '01', title: 'Web Development' },
+    { slug: 'app-development', num: '02', title: 'App Development' },
     { slug: 'seo', num: '03', title: 'SEO & Performance' },
     { slug: 'google-ads', num: '04', title: 'Google Ads' },
     { slug: 'ai-agents', num: '05', title: 'AI Agents' },
   ],
   ru: [
-    { slug: 'websites', num: '01', title: 'Создание сайтов' },
-    { slug: 'apps', num: '02', title: 'Разработка приложений' },
+    { slug: 'web-development', num: '01', title: 'Создание сайтов' },
+    { slug: 'app-development', num: '02', title: 'Разработка приложений' },
     { slug: 'seo', num: '03', title: 'SEO и производительность' },
     { slug: 'google-ads', num: '04', title: 'Google Ads' },
     { slug: 'ai-agents', num: '05', title: 'AI агенты' },
   ],
   th: [
-    { slug: 'websites', num: '01', title: 'สร้างเว็บไซต์' },
-    { slug: 'apps', num: '02', title: 'พัฒนาแอป' },
+    { slug: 'web-development', num: '01', title: 'สร้างเว็บไซต์' },
+    { slug: 'app-development', num: '02', title: 'พัฒนาแอป' },
     { slug: 'seo', num: '03', title: 'SEO & ประสิทธิภาพ' },
     { slug: 'google-ads', num: '04', title: 'Google Ads' },
     { slug: 'ai-agents', num: '05', title: 'AI Agents' },
@@ -611,7 +611,7 @@ export default function ServicePage({ lang, slug }: { lang: Lang; slug: ServiceS
       </RevealSection>
 
       {/* PROJECTS — only for websites and apps */}
-      {(slug === 'websites' || slug === 'apps') && (
+      {(slug === 'web-development' || slug === 'app-development') && (
         <RevealSection>
           <section style={{ ...styles.section, background: '#080808' }}>
             <div style={styles.container}>

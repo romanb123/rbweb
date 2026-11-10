@@ -747,7 +747,7 @@ function Nav({ lang, onChangeLang }: { lang: Lang; onChangeLang: (l: Lang) => vo
           <a href="#projects">{t.projects}</a>
           <a href="#about">{t.about}</a>
           {lang === 'he' && (
-            <a href="/he/blog" style={{ color: 'inherit' }}>בלוג</a>
+            <a href="/he/blog">בלוג</a>
           )}
           <select
             className="lang-select"

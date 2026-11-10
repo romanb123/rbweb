@@ -10,20 +10,20 @@ const LANGS: Lang[] = ['he', 'en', 'ru', 'th']
 
 const META: Record<Lang, { title: string; description: string }> = {
   he: {
-    title: 'RBapp — מפתח Full-Stack | פיתוח אתרים ואפליקציות',
-    description: 'בונה אתרים מהירים ואפליקציות מובייל — מהרעיון ועד המוצר הסופי. React, Next.js, WordPress, React Native.',
+    title: 'RBapp — בניית אתרים, אפליקציות, פתרונות AI ואוטומציות',
+    description: 'בניית אתרים מהירים, אפליקציות מובייל, פתרונות AI ואוטומציות לעסקים. מהרעיון ועד המוצר הסופי — Next.js, React Native, WordPress.',
   },
   en: {
-    title: 'RBapp — Full-Stack Developer | Web & App Development',
-    description: 'Building fast websites and mobile apps — from idea to live product. React, Next.js, WordPress, React Native.',
+    title: 'RBapp — Websites, Apps, AI Solutions & Automation',
+    description: 'Building fast websites, mobile apps, AI solutions and business automation — from idea to live product. Next.js, React Native, WordPress.',
   },
   ru: {
-    title: 'RBapp — Full-Stack Разработчик | Веб и Мобильные Приложения',
-    description: 'Создаю быстрые сайты и мобильные приложения — от идеи до готового продукта. React, Next.js, WordPress, React Native.',
+    title: 'RBapp — Сайты, Приложения, AI-решения и Автоматизация',
+    description: 'Создаю быстрые сайты, мобильные приложения, AI-решения и автоматизацию для бизнеса. Next.js, React Native, WordPress.',
   },
   th: {
-    title: 'RBapp — นักพัฒนา Full-Stack | พัฒนาเว็บและแอป',
-    description: 'สร้างเว็บไซต์และแอปมือถือ — จากไอเดียสู่ผลิตภัณฑ์จริง React, Next.js, WordPress, React Native.',
+    title: 'RBapp — เว็บไซต์, แอป, โซลูชัน AI และระบบอัตโนมัติ',
+    description: 'สร้างเว็บไซต์เร็ว, แอปมือถือ, โซลูชัน AI และระบบอัตโนมัติสำหรับธุรกิจ — Next.js, React Native, WordPress.',
   },
 }
 

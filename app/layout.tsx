@@ -7,22 +7,22 @@ import CookieBanner from './_components/CookieBanner'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'RBapp — מפתח Full-Stack | פיתוח אתרים ואפליקציות',
-  description: 'מפתח Full-Stack עם 5+ שנות ניסיון. בניית אתרים, אפליקציות מובייל ופתרונות SEO. Web & App Developer — Next.js, React, WordPress.',
-  keywords: ['web developer', 'app developer', 'full-stack', 'React', 'Next.js', 'WordPress', 'Israel', 'מפתח אתרים'],
+  title: 'RBapp — מפתח Full-Stack | בניית אתרים, אפליקציות ופתרונות AI',
+  description: 'בניית אתרים מהירים, אפליקציות מובייל, פתרונות AI ואוטומציות לעסקים. מפתח Full-Stack עם 5+ שנות ניסיון — Next.js, React, React Native, WordPress.',
+  keywords: ['בניית אתרים', 'פיתוח אפליקציות', 'פתרונות AI', 'אוטומציות', 'מפתח אתרים', 'web developer', 'app developer', 'full-stack', 'React', 'Next.js', 'WordPress', 'Israel', 'AI solutions'],
   icons: { icon: '/favicon.svg' },
   openGraph: {
-    title: 'RBapp — מפתח Full-Stack | פיתוח אתרים ואפליקציות',
-    description: 'מפתח Full-Stack עם 5+ שנות ניסיון. בניית אתרים, אפליקציות מובייל ופתרונות SEO.',
+    title: 'RBapp — מפתח Full-Stack | בניית אתרים, אפליקציות ופתרונות AI',
+    description: 'בניית אתרים מהירים, אפליקציות מובייל, פתרונות AI ואוטומציות לעסקים. מפתח Full-Stack עם 5+ שנות ניסיון.',
     url: 'https://www.rb-app.com',
     siteName: 'RBapp',
-    images: [{ url: 'https://www.rb-app.com/og-image.png', width: 1200, height: 630, alt: 'RBapp — פיתוח אתרים ואפליקציות' }],
+    images: [{ url: 'https://www.rb-app.com/og-image.png', width: 1200, height: 630, alt: 'RBapp — בניית אתרים, אפליקציות ופתרונות AI' }],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'RBapp — מפתח Full-Stack | פיתוח אתרים ואפליקציות',
-    description: 'מפתח Full-Stack עם 5+ שנות ניסיון. בניית אתרים, אפליקציות מובייל ופתרונות SEO.',
+    title: 'RBapp — מפתח Full-Stack | בניית אתרים, אפליקציות ופתרונות AI',
+    description: 'בניית אתרים מהירים, אפליקציות מובייל, פתרונות AI ואוטומציות לעסקים. מפתח Full-Stack עם 5+ שנות ניסיון.',
     images: ['https://www.rb-app.com/og-image.png'],
   },
 }

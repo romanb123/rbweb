@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import SiteNav from './SiteNav'
 import type { PostMeta } from '../../content/blog/registry'
 
 function formatDate(dateStr: string): string {
@@ -14,10 +15,10 @@ interface Props {
 export default function BlogPost({ meta, children }: Props) {
   return (
     <div className="blog-post-page">
-      <nav className="blog-nav">
-        <Link href="/he" className="blog-logo">RB</Link>
-        <Link href="/he/blog" className="blog-back">&#8592; חזרה לבלוג</Link>
-      </nav>
+      <SiteNav />
+      <div className="blog-post-back-wrap">
+        <Link href="/he/blog" className="blog-nav-back">&#8592; חזרה לבלוג</Link>
+      </div>
 
       <header className="blog-post-header">
         <div className="blog-post-tags">

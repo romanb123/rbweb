@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 const SERVICE_ITEMS = [
   { num: '01', title: 'בניית אתרים',           slug: 'web-development' },
@@ -12,6 +12,13 @@ const SERVICE_ITEMS = [
 
 export default function SiteNav({ basePath = '/he' }: { basePath?: string }) {
   const [servicesOpen, setServicesOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
+
+  const closeMenu = () => {
+    setMenuOpen(false)
+    setMobileServicesOpen(false)
+  }
 
   return (
     <nav className="nav nav--scrolled">
@@ -19,6 +26,8 @@ export default function SiteNav({ basePath = '/he' }: { basePath?: string }) {
         <a href={basePath} className="nav-brand">
           <span className="nav-brand-text">RBapp</span>
         </a>
+
+        {/* Desktop links */}
         <div className="nav-links">
           <div
             className="nav-dropdown-wrap"
@@ -48,6 +57,49 @@ export default function SiteNav({ basePath = '/he' }: { basePath?: string }) {
           <a href="/he/blog">בלוג</a>
           <a href={`${basePath}#contact`} className="nav-cta">צור קשר ↗</a>
         </div>
+
+        {/* Hamburger button */}
+        <button
+          className={`nav-hamburger${menuOpen ? ' open' : ''}`}
+          onClick={() => setMenuOpen(o => !o)}
+          aria-label={menuOpen ? 'סגור תפריט' : 'פתח תפריט'}
+          aria-expanded={menuOpen}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+      </div>
+
+      {/* Mobile menu */}
+      <div className={`nav-mobile${menuOpen ? ' open' : ''}`} aria-hidden={!menuOpen}>
+        {/* Services accordion */}
+        <div className={`nav-mobile-services${mobileServicesOpen ? ' open' : ''}`}>
+          <div
+            className="nav-mobile-services-title"
+            onClick={() => setMobileServicesOpen(o => !o)}
+          >
+            שירותים <span className="nav-caret">▾</span>
+          </div>
+          <div className="nav-mobile-services-list">
+            {SERVICE_ITEMS.map(s => (
+              <a
+                key={s.num}
+                href={`/he/services/${s.slug}`}
+                className="nav-mobile-service-item"
+                onClick={closeMenu}
+              >
+                <span className="nav-dropdown-num">{s.num}</span>
+                {s.title}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <a href={`${basePath}#projects`} className="nav-mobile-link" onClick={closeMenu}>פרויקטים</a>
+        <a href={`${basePath}#about`} className="nav-mobile-link" onClick={closeMenu}>אודות</a>
+        <a href="/he/blog" className="nav-mobile-link" onClick={closeMenu}>בלוג</a>
+        <a href={`${basePath}#contact`} className="nav-mobile-link nav-cta-mobile" onClick={closeMenu}>צור קשר ↗</a>
       </div>
     </nav>
   )

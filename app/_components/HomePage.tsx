@@ -245,13 +245,13 @@ const T = {
       items: [
         {
           num: '01',
-          title: 'פיתוח אתרים',
+          title: 'בניית אתרים',
           desc: 'אתרים מותאמים אישית מעיצובי Figma או מאפס. WordPress, React, Next.js — כל מה שהפרויקט שלך צריך.',
           tags: ['React', 'Next.js', 'WordPress', 'PHP', 'SCSS'],
         },
         {
           num: '02',
-          title: 'פיתוח אפליקציות',
+          title: 'בניית אפליקציות',
           desc: 'אפליקציות מובייל ואינטרנט פול-סטאק. מעיצוב REST API ועד ממשק משתמש מלוטש — בנויות לצמיחה ולפרודקשן.',
           tags: ['React Native', 'Node.js', 'MongoDB', 'REST API'],
         },
@@ -703,7 +703,9 @@ function Logo({ size = 38 }: { size?: number }) {
 // ─── Nav ──────────────────────────────────────────────────────────────────────
 function Nav({ lang, onChangeLang }: { lang: Lang; onChangeLang: (l: Lang) => void }) {
   const [scrolled, setScrolled] = useState(false)
+  const [servicesOpen, setServicesOpen] = useState(false)
   const t = T[lang].nav
+  const serviceItems = T[lang].services.items
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -719,9 +721,34 @@ function Nav({ lang, onChangeLang }: { lang: Lang; onChangeLang: (l: Lang) => vo
           <span className="nav-brand-text">RBapp</span>
         </a>
         <div className="nav-links">
-          <a href="#services">{t.services}</a>
+          <div
+            className="nav-dropdown-wrap"
+            onMouseEnter={() => setServicesOpen(true)}
+            onMouseLeave={() => setServicesOpen(false)}
+          >
+            <a href="#services" className="nav-dropdown-trigger">
+              {t.services} <span className="nav-caret" aria-hidden="true">▾</span>
+            </a>
+            {servicesOpen && (
+              <div className="nav-dropdown">
+                {serviceItems.map(s => (
+                  <a
+                    key={s.num}
+                    href={`/${lang}/services/${SERVICE_SLUG_MAP[s.num as keyof typeof SERVICE_SLUG_MAP]}`}
+                    className="nav-dropdown-item"
+                  >
+                    <span className="nav-dropdown-num">{s.num}</span>
+                    {s.title}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
           <a href="#projects">{t.projects}</a>
           <a href="#about">{t.about}</a>
+          {lang === 'he' && (
+            <a href="/he/blog" style={{ color: 'inherit' }}>בלוג</a>
+          )}
           <select
             className="lang-select"
             value={lang}

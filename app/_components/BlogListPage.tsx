@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import SiteNav from './SiteNav'
 import { HE_POSTS } from '../../content/blog/registry'
 
 function formatDate(dateStr: string): string {
@@ -9,14 +10,7 @@ function formatDate(dateStr: string): string {
 export default function BlogListPage() {
   return (
     <div className="blog-list-page">
-      <nav className="nav nav--scrolled">
-        <div className="nav-inner">
-          <Link href="/he" className="logo-mark">RB</Link>
-          <div className="nav-links">
-            <Link href="/he" className="blog-nav-back">← דף הבית</Link>
-          </div>
-        </div>
-      </nav>
+      <SiteNav />
 
       <div className="blog-hero">
         <div className="blog-hero-label">BLOG</div>

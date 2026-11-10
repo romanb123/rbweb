@@ -1755,7 +1755,7 @@ html[lang="th"] .hero-line { font-size: clamp(30px, 8vw, 90px); }
 .blog-post-row::before {
   content: '';
   position: absolute;
-  inset: 0 -2rem;
+  top: 0; bottom: 0; left: -2rem; right: -2rem;
   border-radius: 12px;
   background: rgba(200, 255, 0, 0);
   transition: background 0.25s;

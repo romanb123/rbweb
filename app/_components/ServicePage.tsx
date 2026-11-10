@@ -532,34 +532,36 @@ export default function ServicePage({ lang, slug }: { lang: Lang; slug: ServiceS
         </section>
       </RevealSection>
 
-      {/* PROJECTS */}
-      <RevealSection>
-        <section style={{ ...styles.section, background: '#080808' }}>
-          <div style={styles.container}>
-            <span style={styles.sectionLabel}>/ Work</span>
-            <h2 style={styles.sectionTitle}>{PROJECTS_TITLE[lang]}</h2>
-            <div style={styles.projectsGrid}>
-              {data.projects.map((p, i) => (
-                <a
-                  key={i}
-                  href={p.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={styles.projectCard}
-                  onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.background = '#111' }}
-                  onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.background = '#0d0d0d' }}
-                >
-                  <div>
-                    <div style={styles.projectTitle}>{p.title}</div>
-                    <div style={styles.projectTag}>{p.tag}</div>
-                  </div>
-                  <span style={styles.projectArrow}>↗</span>
-                </a>
-              ))}
+      {/* PROJECTS — only for websites and apps */}
+      {(slug === 'websites' || slug === 'apps') && (
+        <RevealSection>
+          <section style={{ ...styles.section, background: '#080808' }}>
+            <div style={styles.container}>
+              <span style={styles.sectionLabel}>/ Work</span>
+              <h2 style={styles.sectionTitle}>{PROJECTS_TITLE[lang]}</h2>
+              <div style={styles.projectsGrid}>
+                {data.projects.map((p, i) => (
+                  <a
+                    key={i}
+                    href={p.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={styles.projectCard}
+                    onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.background = '#111' }}
+                    onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.background = '#0d0d0d' }}
+                  >
+                    <div>
+                      <div style={styles.projectTitle}>{p.title}</div>
+                      <div style={styles.projectTag}>{p.tag}</div>
+                    </div>
+                    <span style={styles.projectArrow}>↗</span>
+                  </a>
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
-      </RevealSection>
+          </section>
+        </RevealSection>
+      )}
 
       {/* FAQ */}
       <RevealSection>

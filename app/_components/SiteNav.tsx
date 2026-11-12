@@ -25,6 +25,7 @@ export default function SiteNav({ basePath = '/he' }: { basePath?: string }) {
       <nav className="nav nav--scrolled">
         <div className="nav-inner">
           <a href={basePath} className="nav-brand">
+            <div className="logo-mark" style={{ width: 38, height: 38 }}><span>RB</span></div>
             <span className="nav-brand-text">RBapp</span>
           </a>
 

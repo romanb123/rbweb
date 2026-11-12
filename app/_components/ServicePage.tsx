@@ -135,7 +135,11 @@ export default function ServicePage({ lang, slug }: { lang: Lang; slug: ServiceS
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [servicesOpen, setServicesOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
   const isRTL = lang === 'he'
+
+  const closeMenu = () => { setMenuOpen(false); setMobileServicesOpen(false) }
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -539,8 +543,37 @@ export default function ServicePage({ lang, slug }: { lang: Lang; slug: ServiceS
             {lang === 'he' && <a href="/he/blog">בלוג</a>}
             <a href={`/${lang}#contact`} className="nav-cta">{NAV_LABELS[lang].contact}</a>
           </div>
+          <button
+            className={`nav-hamburger${menuOpen ? ' open' : ''}`}
+            onClick={() => setMenuOpen(o => !o)}
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={menuOpen}
+          >
+            <span /><span /><span />
+          </button>
         </div>
       </nav>
+
+      {/* Mobile menu — outside nav to avoid backdrop-filter containing block */}
+      <div className={`nav-mobile${menuOpen ? ' open' : ''}`} aria-hidden={!menuOpen}>
+        <div className={`nav-mobile-services${mobileServicesOpen ? ' open' : ''}`}>
+          <div className="nav-mobile-services-title" onClick={() => setMobileServicesOpen(o => !o)}>
+            {NAV_LABELS[lang].services} <span className="nav-caret">▾</span>
+          </div>
+          <div className="nav-mobile-services-list">
+            {SERVICE_NAV_ITEMS[lang].map(s => (
+              <a key={s.slug} href={`/${lang}/services/${s.slug}`} className="nav-mobile-service-item" onClick={closeMenu}>
+                <span className="nav-dropdown-num">{s.num}</span>
+                {s.title}
+              </a>
+            ))}
+          </div>
+        </div>
+        <a href={`/${lang}#projects`} className="nav-mobile-link" onClick={closeMenu}>{NAV_LABELS[lang].projects}</a>
+        <a href={`/${lang}#about`} className="nav-mobile-link" onClick={closeMenu}>{NAV_LABELS[lang].about}</a>
+        {lang === 'he' && <a href="/he/blog" className="nav-mobile-link" onClick={closeMenu}>בלוג</a>}
+        <a href={`/${lang}#contact`} className="nav-mobile-link nav-cta-mobile" onClick={closeMenu}>{NAV_LABELS[lang].contact}</a>
+      </div>
 
       {/* HERO */}
       <section style={styles.hero}>

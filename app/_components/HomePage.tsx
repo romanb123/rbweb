@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
@@ -966,6 +966,35 @@ function Projects({ lang }: { lang: Lang }) {
           <h2 className="section-title">{t.title}</h2>
         </div>
         <div className="projects-grid reveal reveal-delay-1">
+          <article className="project-card project-card--web project-card--moysam reveal">
+            <div className="project-sofia-mockup" aria-hidden="true">
+              <div className="sofia-desktop-frame">
+                <div className="sofia-browser-bar">
+                  <div className="sofia-browser-dots"><span /><span /><span /></div>
+                  <div className="sofia-browser-url">мой-сам.рф</div>
+                </div>
+                <img src="/moysam-desktop.jpg" alt="МойСам — сеть автомоек, тצוגת desktop" className="sofia-desktop-img" loading="lazy" />
+              </div>
+              <div className="sofia-mobile-frame">
+                <div className="sofia-mobile-notch" />
+                <img src="/moysam-mobile.jpg" alt="МойСам — тצוגת мобайл" className="sofia-mobile-img" loading="lazy" />
+              </div>
+            </div>
+            <div className="project-info project-info--web">
+              <span className="project-type">{t.moysam_type}</span>
+              <h3 className="project-title">{t.moysam_title}</h3>
+              <p className="project-desc">{t.moysam_desc}</p>
+              <a
+                href="https://xn----8sbzldix.xn--p1ai/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                {t.moysam_link}
+              </a>
+            </div>
+          </article>
+
           <article className="project-card project-card--web project-card--knockout reveal">
             <div className="project-sofia-mockup" aria-hidden="true">
               <div className="sofia-desktop-frame">
@@ -1081,36 +1110,6 @@ function Projects({ lang }: { lang: Lang }) {
               </a>
             </div>
           </article>
-
-          <article className="project-card project-card--web project-card--moysam reveal">
-            <div className="project-sofia-mockup" aria-hidden="true">
-              <div className="sofia-desktop-frame">
-                <div className="sofia-browser-bar">
-                  <div className="sofia-browser-dots"><span /><span /><span /></div>
-                  <div className="sofia-browser-url">мой-сам.рф</div>
-                </div>
-                <img src="/moysam-desktop.jpg" alt="МойСам — сеть автомоек, тצоגת desktop" className="sofia-desktop-img" loading="lazy" />
-              </div>
-              <div className="sofia-mobile-frame">
-                <div className="sofia-mobile-notch" />
-                <img src="/moysam-mobile.jpg" alt="МойСам — тצоגת мобайл" className="sofia-mobile-img" loading="lazy" />
-              </div>
-            </div>
-            <div className="project-info project-info--web">
-              <span className="project-type">{t.moysam_type}</span>
-              <h3 className="project-title">{t.moysam_title}</h3>
-              <p className="project-desc">{t.moysam_desc}</p>
-              <a
-                href="https://xn----8sbzldix.xn--p1ai/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="project-link"
-              >
-                {t.moysam_link}
-              </a>
-            </div>
-          </article>
-
           <article className="project-card project-card--featured">
             <div className="project-phone project-phone--maze" aria-hidden="true">
               <div className="phone-screen">

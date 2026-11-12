@@ -1084,9 +1084,16 @@ function Projects({ lang }: { lang: Lang }) {
 
           <article className="project-card project-card--web project-card--moysam reveal">
             <div className="project-sofia-mockup" aria-hidden="true">
-              <div className="sofia-mobile-frame sofia-mobile-frame--center">
+              <div className="sofia-desktop-frame">
+                <div className="sofia-browser-bar">
+                  <div className="sofia-browser-dots"><span /><span /><span /></div>
+                  <div className="sofia-browser-url">мой-сам.рф</div>
+                </div>
+                <img src="/moysam-desktop.jpg" alt="МойСам — сеть автомоек, тצоגת desktop" className="sofia-desktop-img" loading="lazy" />
+              </div>
+              <div className="sofia-mobile-frame">
                 <div className="sofia-mobile-notch" />
-                <img src="/moysam-mobile.jpg" alt="МойСам — сеть автомоек самообслуживания, тцоגת мобайл" className="sofia-mobile-img" style={{ objectPosition: 'center 7%' }} loading="lazy" />
+                <img src="/moysam-mobile.jpg" alt="МойСам — тצоגת мобайл" className="sofia-mobile-img" loading="lazy" />
               </div>
             </div>
             <div className="project-info project-info--web">

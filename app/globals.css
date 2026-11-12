@@ -1435,6 +1435,14 @@ html[lang="th"] .hero-line { font-size: clamp(30px, 8vw, 90px); }
   z-index: 2;
 }
 
+.sofia-mobile-frame--center {
+  position: relative;
+  right: auto;
+  bottom: auto;
+  width: 54%;
+  margin: auto;
+}
+
 .sofia-mobile-notch {
   height: 8px;
   background: #252525;

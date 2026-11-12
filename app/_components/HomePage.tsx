@@ -157,6 +157,10 @@ const T = {
       maslul_title: 'Maslul Nadir — RareRote Travel',
       maslul_desc: 'A full travel agency website for unique, off-the-beaten-path routes. Hotels, flights, packages, personal guides — all from the first consultation to returning home.',
       maslul_link: 'Visit website ↗',
+      moysam_type: 'Website · Self-service Car Wash Network · Russian',
+      moysam_title: 'МойСам — Self-service Car Wash Network',
+      moysam_desc: 'Website for a network of self-service car washes operating since 1997. Modern design with location finder, wash cost calculator, and franchise information.',
+      moysam_link: 'Visit website ↗',
       sahara_type: 'WooCommerce · Beauty & Care · Hebrew',
       sahara_title: 'SAHARA — Brows, Hair & Care',
       sahara_desc: 'A full e-commerce store for a premium beauty brand. Brow growth serums, waxes, and tweezers — clean aesthetic, mobile-first design, and a smooth shopping experience.',
@@ -290,6 +294,10 @@ const T = {
       maslul_title: 'מסלול נדיר — RareRote',
       maslul_desc: 'אתר מלא לסוכנות נסיעות המתמחה במסלולים נדירים ובלתי שגרתיים. טיסות, מלונות, חבילות וליווי אישי — מהרעיון הראשון ועד חזרה הביתה.',
       maslul_link: 'כניסה לאתר ↗',
+      moysam_type: 'אתר אינטרנט · רשת שטיפות עצמיות · רוסית',
+      moysam_title: 'МойСам — רשת שטיפות עצמיות לרכב',
+      moysam_desc: 'אתר לרשת שטיפות רכב עצמיות הפועלת מאז 1997. עיצוב מודרני עם מאתר סניפים, מחשבון עלות שטיפה ומידע על פרנצ\'ייז.',
+      moysam_link: 'כניסה לאתר ↗',
       sahara_type: 'WooCommerce · יופי וטיפוח · עברית',
       sahara_title: 'SAHARA — גבות, שיער וטיפוח',
       sahara_desc: 'חנות אי-קומרס מלאה למותג יופי פרמיום. רולרים לצמיחת גבות, ווקסים לפיסול ופינצטות מקצועיות — עיצוב נקי, ממוקד מובייל וחוויית קנייה חלקה.',
@@ -422,6 +430,10 @@ const T = {
       maslul_title: 'Maslul Nadir — RareRote',
       maslul_desc: 'Полноценный сайт для туристического агентства, специализирующегося на редких и нестандартных маршрутах. Перелёты, отели, пакеты и личное сопровождение — от первой встречи до возвращения домой.',
       maslul_link: 'Перейти на сайт ↗',
+      moysam_type: 'Сайт · Сеть автомоек · Русский',
+      moysam_title: 'МойСам — сеть автомоек самообслуживания',
+      moysam_desc: 'Сайт для сети автомоек самообслуживания, работающей с 1997 года. Современный дизайн с поиском ближайшей мойки, калькулятором стоимости и информацией о франшизе.',
+      moysam_link: 'Перейти на сайт ↗',
       sahara_type: 'WooCommerce · Красота и уход · Иврит',
       sahara_title: 'SAHARA — Брови, волосы и уход',
       sahara_desc: 'Полноценный интернет-магазин для премиум бьюти-бренда. Роллеры для роста бровей, воск для придания формы и пинцеты — чистый дизайн, mobile-first и удобный шопинг.',
@@ -548,6 +560,10 @@ const T = {
       maslul_title: 'Maslul Nadir — RareRote',
       maslul_desc: 'เว็บไซต์ครบวงจรสำหรับบริษัทท่องเที่ยวที่เชี่ยวชาญเส้นทางหายากและแปลกใหม่ ตั๋วเครื่องบิน โรงแรม แพ็กเกจ และไกด์ส่วนตัว — ตั้งแต่การนัดหมายครั้งแรกจนถึงกลับบ้าน',
       maslul_link: 'เยี่ยมชมเว็บไซต์ ↗',
+      moysam_type: 'เว็บไซต์ · เครือข่ายล้างรถบริการตนเอง · รัสเซีย',
+      moysam_title: 'МойСам — เครือข่ายล้างรถบริการตนเอง',
+      moysam_desc: 'เว็บไซต์สำหรับเครือข่ายล้างรถบริการตนเองที่ดำเนินงานมาตั้งแต่ปี 1997 ดีไซน์ทันสมัยพร้อมระบบค้นหาสาขา เครื่องคำนวณราคา และข้อมูลแฟรนไชส์',
+      moysam_link: 'เยี่ยมชมเว็บไซต์ ↗',
       sahara_type: 'WooCommerce · ความงามและการดูแล · ฮีบรู',
       sahara_title: 'SAHARA — คิ้ว ผม และการดูแล',
       sahara_desc: 'ร้านค้าออนไลน์ครบวงจรสำหรับแบรนด์ความงามพรีเมียม โรลเลอร์เร่งการเจริญเติบโตของคิ้ว แว็กซ์ และแหนบ — ดีไซน์สะอาด mobile-first และประสบการณ์ช้อปปิ้งที่ลื่นไหล',
@@ -1062,6 +1078,28 @@ function Projects({ lang }: { lang: Lang }) {
                 className="project-link"
               >
                 {t.maslul_link}
+              </a>
+            </div>
+          </article>
+
+          <article className="project-card project-card--web project-card--moysam reveal">
+            <div className="project-sofia-mockup" aria-hidden="true">
+              <div className="sofia-mobile-frame sofia-mobile-frame--center">
+                <div className="sofia-mobile-notch" />
+                <img src="/moysam-mobile.jpg" alt="МойСам — сеть автомоек самообслуживания, тцоגת мобайл" className="sofia-mobile-img" style={{ objectPosition: 'center 7%' }} loading="lazy" />
+              </div>
+            </div>
+            <div className="project-info project-info--web">
+              <span className="project-type">{t.moysam_type}</span>
+              <h3 className="project-title">{t.moysam_title}</h3>
+              <p className="project-desc">{t.moysam_desc}</p>
+              <a
+                href="https://xn----8sbzldix.xn--p1ai/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                {t.moysam_link}
               </a>
             </div>
           </article>

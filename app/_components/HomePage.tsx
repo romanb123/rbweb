@@ -97,17 +97,17 @@ const T = {
       contact: 'Contact ↗',
     },
     hero: {
-      tag: 'Full-Stack Developer · Available for projects',
+      tag: 'Digital Studio · Web · Apps · AI',
       line1: 'WEB & APP',
       line2: 'DEVELOPMENT.',
       sub: 'Building digital products that perform, convert,\nand stand the test of time.',
       cta1: 'Start a project →',
-      cta2: 'See my work ↓',
+      cta2: 'See our work ↓',
       stat_num: '5+',
       stat_label: 'Years Experience',
     },
     services: {
-      label: 'What I Build',
+      label: 'What We Build',
       title: 'Services',
       items: [
         {
@@ -181,10 +181,10 @@ const T = {
       app2_link: 'View on Google Play ↗',
     },
     about: {
-      label: 'About',
-      title: 'Full-Stack\nDeveloper',
-      text1: "I'm Roman Besiakov — a Full-Stack Developer with 5+ years of professional experience building production-grade websites and applications. I bring ideas from concept to live product.",
-      text2: 'I specialize in transforming designs into fast, functional digital products. From WordPress news portals to mobile apps on Google Play — I build things that actually work.',
+      label: 'About Us',
+      title: 'RBapp\nDigital Studio',
+      text1: "RBapp is a digital studio specializing in building fast websites, mobile apps, and AI-powered solutions for businesses. We've delivered production-grade products across multiple industries — from fitness to e-commerce to travel.",
+      text2: 'From WordPress portals to React Native apps on Google Play — we build digital products that actually work, convert, and scale.',
       h1_title: 'John Bryce',
       h1_sub: 'Full-Stack Web Development · Score: 100/100',
       h2_title: '5+ Years',
@@ -194,10 +194,10 @@ const T = {
       linkedin: 'LinkedIn Profile ↗',
     },
     process: {
-      label: 'How I Work',
+      label: 'How We Work',
       title: 'The Process',
       steps: [
-        { num: '01', title: 'Discovery', desc: 'We define scope, goals, and budget. I ask the right questions so nothing surprises us later.' },
+        { num: '01', title: 'Discovery', desc: 'We define scope, goals, and budget. The right questions upfront mean no surprises later.' },
         { num: '02', title: 'Design & Plan', desc: 'An HTML prototype so you can see and feel the site before a single line of production code is written.' },
         { num: '03', title: 'Development', desc: 'Clean code, iterative builds, regular updates. You can review and redirect at every step.' },
         { num: '04', title: 'Launch', desc: 'Production deployment, performance testing, and a full handoff — everything ready to go live.' },
@@ -214,7 +214,7 @@ const T = {
       message_ph: 'Tell me about your project...',
       submit: 'Send message →',
       sending: 'Sending...',
-      success: "Message sent! I'll get back to you soon.",
+      success: "Message sent! We'll get back to you shortly.",
       error: 'Something went wrong. Please try again.',
       agree: 'I agree to the use of my details for contact purposes',
       agree_required: 'Please confirm your agreement to continue.',
@@ -234,17 +234,17 @@ const T = {
       contact: 'צור קשר ↗',
     },
     hero: {
-      tag: 'מפתח פול-סטאק · זמין לפרויקטים',
+      tag: 'סטודיו דיגיטלי · אתרים · אפליקציות · AI',
       line1: 'בניית אתרים',
       line2: 'ואפליקציות.',
       sub: 'בניית מוצרים דיגיטליים שמניבים תוצאות,\nמומרים ועומדים במבחן הזמן.',
       cta1: 'התחל פרויקט ←',
-      cta2: 'לעבודות שלי ↑',
+      cta2: 'לעבודות שלנו ↑',
       stat_num: '+5',
       stat_label: 'שנות ניסיון',
     },
     services: {
-      label: 'מה אני בונה',
+      label: 'מה אנחנו בונים',
       title: 'שירותים',
       items: [
         {
@@ -317,10 +317,10 @@ const T = {
       app2_link: 'צפה ב-Google Play ↗',
     },
     about: {
-      label: 'אודות',
-      title: 'מפתח\nפול-סטאק',
-      text1: 'אני רומן בסיאקוב — מפתח פול-סטאק עם 5+ שנות ניסיון מקצועי בבניית אתרים ואפליקציות ב-production. אני מביא רעיונות ממושג למוצר חי.',
-      text2: 'מתמחה בהפיכת עיצובים למוצרים דיגיטליים מהירים ופונקציונליים. מפורטלי חדשות בוורדפרס ועד אפליקציות ב-Google Play — אני בונה דברים שעובדים.',
+      label: 'אודותינו',
+      title: 'RBapp\nסטודיו דיגיטלי',
+      text1: 'RBapp היא סטודיו דיגיטלי המתמחה בבניית אתרים מהירים, אפליקציות מובייל ופתרונות AI לעסקים. סיפקנו פתרונות production בתעשיות שונות — מכושר ועד אי-קומרס ותיירות.',
+      text2: 'מפורטלי WordPress ועד אפליקציות React Native ב-Google Play — אנחנו בונים מוצרים דיגיטליים שעובדים, ממירים ומתרחבים.',
       h1_title: 'John Bryce',
       h1_sub: 'פיתוח Full-Stack · ציון: 100/100',
       h2_title: '+5 שנות ניסיון',
@@ -330,10 +330,10 @@ const T = {
       linkedin: 'פרופיל LinkedIn ↗',
     },
     process: {
-      label: 'איך אני עובד',
+      label: 'איך אנחנו עובדים',
       title: 'תהליך העבודה',
       steps: [
-        { num: '01', title: 'פגישת היכרות', desc: 'מבינים את הצרכים, המטרות והתקציב. שואל את השאלות הנכונות כדי שלא יהיו הפתעות בדרך.' },
+        { num: '01', title: 'פגישת היכרות', desc: 'מבינים את הצרכים, המטרות והתקציב. השאלות הנכונות בהתחלה — ולא יהיו הפתעות בדרך.' },
         { num: '02', title: 'עיצוב ותכנון', desc: 'טיוטה ב-HTML כדי שתראה ותרגיש את האתר לפני שנכתבת שורת קוד אחת לפרודקשן.' },
         { num: '03', title: 'פיתוח', desc: 'קוד נקי, בנייה איטרטיבית ועדכונים שוטפים. אפשר לבדוק ולתקן כיוון בכל שלב.' },
         { num: '04', title: 'השקה', desc: 'פריסה לפרודקשן, בדיקות ביצועים ומסירה מלאה — הכל מוכן לעלות לאוויר.' },
@@ -347,10 +347,10 @@ const T = {
       name_ph: 'השם שלך',
       phone_ph: 'הטלפון שלך',
       email_ph: 'האימייל שלך (אופציונלי)',
-      message_ph: 'ספר לי על הפרויקט...',
+      message_ph: 'ספרו לנו על הפרויקט...',
       submit: 'שלח הודעה ←',
       sending: 'שולח...',
-      success: 'ההודעה נשלחה! אחזור אליך בקרוב.',
+      success: 'ההודעה נשלחה! ניצור איתך קשר בקרוב.',
       error: 'משהו השתבש. נסה שנית.',
       agree: 'אני מסכים לשימוש בפרטים שלי לצורכי יצירת קשר',
       agree_required: 'יש לאשר את ההסכמה כדי להמשיך.',
@@ -366,11 +366,11 @@ const T = {
     nav: {
       services: 'Услуги',
       projects: 'Проекты',
-      about: 'Обо мне',
+      about: 'О нас',
       contact: 'Связаться ↗',
     },
     hero: {
-      tag: 'Full-Stack разработчик · Открыт для проектов',
+      tag: 'Digital Studio · Сайты · Приложения · AI',
       line1: 'ВЕБ И АПП',
       line2: 'РАЗРАБОТКА.',
       sub: 'Создаю цифровые продукты, которые работают,\nконвертируют и выдерживают испытание временем.',
@@ -380,7 +380,7 @@ const T = {
       stat_label: 'Лет опыта',
     },
     services: {
-      label: 'Что я делаю',
+      label: 'Что мы делаем',
       title: 'Услуги',
       items: [
         {
@@ -453,10 +453,10 @@ const T = {
       app2_link: 'Посмотреть в Google Play ↗',
     },
     about: {
-      label: 'Обо мне',
-      title: 'Full-Stack\nРазработчик',
-      text1: 'Я Роман Бесяков — Full-Stack разработчик с 5+ годами профессионального опыта создания сайтов и приложений production-уровня. Воплощаю идеи от концепции до живого продукта.',
-      text2: 'Специализируюсь на превращении дизайнов в быстрые и функциональные цифровые продукты. От новостных порталов на WordPress до мобильных приложений в Google Play.',
+      label: 'О нас',
+      title: 'RBapp\nDigital Studio',
+      text1: 'RBapp — digital студия, специализирующаяся на создании быстрых сайтов, мобильных приложений и AI-решений для бизнеса. Мы реализовали production-проекты в разных отраслях — от фитнеса до e-commerce и туризма.',
+      text2: 'От новостных порталов на WordPress до приложений на React Native в Google Play — мы создаём цифровые продукты, которые работают, конвертируют и масштабируются.',
       h1_title: 'John Bryce',
       h1_sub: 'Веб-разработка Full-Stack · Оценка: 100/100',
       h2_title: '5+ Лет',
@@ -466,7 +466,7 @@ const T = {
       linkedin: 'Профиль LinkedIn ↗',
     },
     process: {
-      label: 'Как я работаю',
+      label: 'Как мы работаем',
       title: 'Процесс работы',
       steps: [
         { num: '01', title: 'Знакомство', desc: 'Обсуждаем цели, объём и бюджет. Правильные вопросы в начале — отсутствие сюрпризов в конце.' },
@@ -486,7 +486,7 @@ const T = {
       message_ph: 'Расскажите о вашем проекте...',
       submit: 'Отправить →',
       sending: 'Отправка...',
-      success: 'Сообщение отправлено! Скоро свяжусь с вами.',
+      success: 'Сообщение отправлено! Мы свяжемся с вами в ближайшее время.',
       error: 'Что-то пошло не так. Попробуйте ещё раз.',
       agree: 'Я согласен на использование моих данных для связи',
       agree_required: 'Пожалуйста, подтвердите своё согласие.',
@@ -506,7 +506,7 @@ const T = {
       contact: 'ติดต่อ ↗',
     },
     hero: {
-      tag: 'นักพัฒนา Full-Stack · พร้อมรับโปรเจกต์ใหม่',
+      tag: 'Digital Studio · เว็บ · แอป · AI',
       line1: 'พัฒนาเว็บ',
       line2: 'และแอป.',
       sub: 'สร้างผลิตภัณฑ์ดิจิทัลที่ได้ผลลัพธ์จริง\nและยืนหยัดในการทดสอบของเวลา',
@@ -516,7 +516,7 @@ const T = {
       stat_label: 'ปีประสบการณ์',
     },
     services: {
-      label: 'สิ่งที่ฉันทำ',
+      label: 'สิ่งที่เราทำ',
       title: 'บริการ',
       items: [
         {
@@ -583,10 +583,10 @@ const T = {
       app2_link: 'ดูใน Google Play ↗',
     },
     about: {
-      label: 'เกี่ยวกับฉัน',
-      title: 'นักพัฒนา\nFull-Stack',
-      text1: 'ผมคือ Roman Besiakov — นักพัฒนา Full-Stack ที่มีประสบการณ์มืออาชีพกว่า 5+ ปีในการสร้างเว็บไซต์และแอปพลิเคชันระดับ production ผมนำไอเดียจากแนวคิดสู่ผลิตภัณฑ์จริง',
-      text2: 'เชี่ยวชาญในการแปลงดีไซน์เป็นผลิตภัณฑ์ดิจิทัลที่รวดเร็วและใช้งานได้จริง ตั้งแต่พอร์ทัลข่าว WordPress จนถึงแอปใน Google Play',
+      label: 'เกี่ยวกับเรา',
+      title: 'RBapp\nDigital Studio',
+      text1: 'RBapp คือ digital studio ที่เชี่ยวชาญด้านการสร้างเว็บไซต์เร็ว แอปมือถือ และโซลูชัน AI สำหรับธุรกิจ เราส่งมอบผลิตภัณฑ์ระดับ production ในหลากหลายอุตสาหกรรม',
+      text2: 'ตั้งแต่พอร์ทัล WordPress จนถึงแอป React Native ใน Google Play — เราสร้างผลิตภัณฑ์ดิจิทัลที่ทำงานได้จริง ดึงดูดลูกค้า และเติบโตได้',
       h1_title: 'John Bryce',
       h1_sub: 'การพัฒนาเว็บ Full-Stack · คะแนน: 100/100',
       h2_title: '5+ ปี',

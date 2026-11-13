@@ -26,6 +26,12 @@ async function getPost(slug: string) {
     case 'business-website-essentials':
       Content = (await import('../../../../content/blog/he/business-website-essentials.mdx')).default
       break
+    case 'website-accessibility':
+      Content = (await import('../../../../content/blog/he/website-accessibility.mdx')).default
+      break
+    case 'privacy-policy-cookies':
+      Content = (await import('../../../../content/blog/he/privacy-policy-cookies.mdx')).default
+      break
     default:
       return null
   }
